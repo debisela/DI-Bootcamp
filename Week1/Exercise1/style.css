@@ -1,0 +1,6 @@
+.cat-img {
+    text-align: center;
+}
+.cat-img img {
+    border: 5px solid red;
+}
