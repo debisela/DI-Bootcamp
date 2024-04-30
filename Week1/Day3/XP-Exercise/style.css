@@ -68,17 +68,23 @@ img {
     top: 225px;
     left: 10px;
 }
+.education-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 .experience-container {
     position: absolute;
     width: 70%;
     height: 500px;
     top: 225px;
     right: 10px;
-    list-style: none;
 }
 
-.experience-container li {
+.experience-container ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .languages-container {
     border-right: 2px solid grey;
