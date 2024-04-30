@@ -46,26 +46,28 @@ img {
 }
 .contact-container {
     border-right: 2px solid grey;
+    padding-right: 10px;
     position: absolute;
     width: 25%;
-    height: 500px;
+    height: 200px;
     top: 20px;
     left: 10px;
 }
 .profile-container {
     position: absolute;
     width: 70%;
-    height: 500px;
+    height: 200px;
     top: 20px;
     right: 10px;
     text-align: justify;
 }
 .education-container {
     border-right: 2px solid grey;
+    padding-right: 10px;
     position: absolute;
     width: 25%;
-    height: 500px;
-    top: 225px;
+    height: 300px;
+    top: 240px;
     left: 10px;
 }
 .education-container ul {
@@ -76,8 +78,8 @@ img {
 .experience-container {
     position: absolute;
     width: 70%;
-    height: 500px;
-    top: 225px;
+    height: 300px;
+    top: 240px;
     right: 10px;
 }
 
@@ -88,16 +90,17 @@ img {
 }
 .languages-container {
     border-right: 2px solid grey;
+    padding-right: 10px;
     position: absolute;
     width: 25%;
-    height: 300px;
-    top: 520px;
+    height: 200px;
+    top: 560px;
     left: 10px;
 }
 .skills-container {
     position: absolute;
     width: 70%;
-    height: 300px;
-    top: 520px;
+    height: 200px;
+    top: 560px;
     right: 10px;
 }
