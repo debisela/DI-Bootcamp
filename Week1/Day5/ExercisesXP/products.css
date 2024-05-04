@@ -3,11 +3,9 @@ body {
 }
 .row1 {
     position: relative;
-    border: 2px solid black;
 }
 .img1 {
     position: absolute;
-    border: 2px solid black;
     height: fit-content;
     text-align: center;
     padding-bottom: 10px;
@@ -58,7 +56,6 @@ button {
 }
 .img2 {
     position: absolute;
-    border: 2px solid black;
     height: fit-content;
     text-align: center;
     padding-bottom: 10px;
@@ -66,7 +63,6 @@ button {
 }
 .img3 {
     position: absolute;
-    border: 2px solid black;
     height: fit-content;
     text-align: center;
     padding-bottom: 10px;
@@ -74,9 +70,16 @@ button {
     }
 .img4 {
     position: absolute;
-    border: 2px solid black;
     height: fit-content;
     text-align: center;
     padding-bottom: 10px;
     left: 630px;
+}
+.row2 {
+    position: absolute;
+    top: 450px;
+}
+.row3 {
+    position: absolute;
+    top: 900px;
 }
