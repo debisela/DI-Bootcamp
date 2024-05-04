@@ -41,6 +41,21 @@ body {
     right: 10px;
     font-size: 0.7em;
 }
+.price {
+    color: green;
+}
+span {
+    color: grey;
+    font-size: 0.8em;
+}
+button {
+    background-color: white;
+    border: 1px solid grey;
+    color: grey;
+    padding: 5px;
+    border-radius: 5%;
+    font-size: 0.7em;
+}
 .img2 {
     position: absolute;
     border: 2px solid black;
