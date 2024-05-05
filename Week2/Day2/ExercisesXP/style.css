@@ -39,32 +39,43 @@ header {
 .container-review-row2 {
     border: 2px solid black;
     display: flex;
-  flex-wrap: wrap;
-  justify-content: center; 
-  margin-top: 100px;  
+    justify-content: center; 
+    flex-wrap: wrap;
+    margin-top: 100px;  
 }
 .review-box1, .review-box2, .review-box3  {
     border: 2px solid black;
     width: 300px;
     text-align: center;
+    background-color: white;
+    height: fit-content;
 }
 .review-box1 {
     margin-right: 100px;
 }
 .review-box2 {
     margin-right: 100px;
+    margin-top: 50px;
 }
 .review-text {
-    background-color: white;
     color: rgb(82, 79, 79);
     padding-top: 20px;
     padding-bottom: 20px;
     border: 2px solid black;
 }
 .name-box {
-    background-color: rgb(244, 156, 98);
     color: white;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 5px;
     border: 2px solid black;
+    text-align: center;
+}
+.review-box1 .name-box {
+    background-color: rgb(247, 91, 143);
+}
+.review-box2 .name-box {
+    background-color: rgb(163, 81, 244);
+}
+.review-box3 .name-box {
+    background-color: rgb(91, 213, 211);
 }
