@@ -1,0 +1,70 @@
+body {
+    background-image: url(https://media.istockphoto.com/id/1254791353/photo/world-backgroun-4k.jpg?s=612x612&w=0&k=20&c=18x3iMx6BNc6HcA_9KeCktyp4iNM8L59cbO6piMEZ54=);
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5em;
+    color: white;
+}
+.container-number-row1 {
+    border: 2px solid black;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  margin-top: 100px;  
+}
+.number-box1, .number-box2, .number-box3  {
+    border: 2px solid black;
+}
+.number-box1 {
+    margin-right: 100px;
+}
+.number-box2 {
+    margin-right: 100px;
+}
+.container-number-row1 h2 {
+    color: rgb(193, 193, 247);
+    font-size: 40px;
+    text-align: center;
+}
+.container-number-row1 p {
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+}
+.container-review-row2 {
+    border: 2px solid black;
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  margin-top: 100px;  
+}
+.review-box1, .review-box2, .review-box3  {
+    border: 2px solid black;
+    width: 300px;
+    text-align: center;
+}
+.review-box1 {
+    margin-right: 100px;
+}
+.review-box2 {
+    margin-right: 100px;
+}
+.review-text {
+    background-color: white;
+    color: rgb(82, 79, 79);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2px solid black;
+}
+.name-box {
+    background-color: rgb(244, 156, 98);
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 2px solid black;
+}
