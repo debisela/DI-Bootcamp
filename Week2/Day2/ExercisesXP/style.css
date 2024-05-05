@@ -14,24 +14,18 @@ header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-  justify-content: center; 
+  justify-content: space-around; 
   margin-top: 100px;  
-}
+  }
 }
 @media all and (min-width: 992px) {
     .container-number-row1 {
         display: flex;
         flex-wrap: wrap;
       justify-content: center; 
+      column-gap: 50px;
       margin-top: 100px;  
     }
-}
-
-.number-box1 {
-    margin-right: 100px;
-}
-.number-box2 {
-    margin-right: 100px;
 }
 .container-number-row1 h2 {
     color: rgb(193, 193, 247);
@@ -48,7 +42,9 @@ header {
 .container-review-row2 {
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
+    align-content: center; 
+    row-gap: 20px;
     flex-wrap: wrap;
     margin-top: 100px;  
 }
@@ -57,12 +53,12 @@ header {
     .container-review-row2 {
         display: flex;
         justify-content: center; 
+        column-gap: 50px;
         flex-wrap: wrap;
         margin-top: 100px;  
     }
     }
 .review-box1, .review-box2, .review-box3  {
-   
     border-radius: 15px;
     border-style: groove;
     width: 300px;
@@ -72,13 +68,11 @@ header {
     position: relative;
     
 }
-.review-box1 {
-    margin-right: 100px;
-}
+@media all and (min-width: 992px) {
 .review-box2 {
-    margin-right: 100px;
     margin-top: 50px;
 }
+    }
 .review-text {
     color: rgb(82, 79, 79);
     padding-top: 20px;
