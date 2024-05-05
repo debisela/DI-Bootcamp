@@ -9,16 +9,24 @@ header {
     font-size: 1.5em;
     color: white;
 }
+@media all and (max-width: 992px) {
 .container-number-row1 {
-    border: 2px solid black;
     display: flex;
-  flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
   justify-content: center; 
   margin-top: 100px;  
 }
-.number-box1, .number-box2, .number-box3  {
-    border: 2px solid black;
 }
+@media all and (min-width: 992px) {
+    .container-number-row1 {
+        display: flex;
+        flex-wrap: wrap;
+      justify-content: center; 
+      margin-top: 100px;  
+    }
+}
+
 .number-box1 {
     margin-right: 100px;
 }
@@ -36,15 +44,27 @@ header {
     text-align: center;
     font-weight: bold;
 }
+@media all and (max-width: 992px) {
 .container-review-row2 {
-    border: 2px solid black;
     display: flex;
+    flex-direction: column;
     justify-content: center; 
     flex-wrap: wrap;
     margin-top: 100px;  
 }
+}
+@media all and (min-width: 992px) {
+    .container-review-row2 {
+        display: flex;
+        justify-content: center; 
+        flex-wrap: wrap;
+        margin-top: 100px;  
+    }
+    }
 .review-box1, .review-box2, .review-box3  {
-    border: 2px solid black;
+   
+    border-radius: 15px;
+    border-style: groove;
     width: 300px;
     text-align: center;
     background-color: white;
@@ -63,13 +83,14 @@ header {
     color: rgb(82, 79, 79);
     padding-top: 20px;
     padding-bottom: 20px;
-    border: 2px solid black;
+    
 }
 .name-box {
     color: white;
     padding-top: 20px;
     padding-bottom: 5px;
-    border: 2px solid black;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
     text-align: center;
 }
 .review-box1 .name-box {
