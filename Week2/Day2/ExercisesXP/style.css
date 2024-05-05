@@ -49,6 +49,8 @@ header {
     text-align: center;
     background-color: white;
     height: fit-content;
+    position: relative;
+    
 }
 .review-box1 {
     margin-right: 100px;
@@ -78,4 +80,13 @@ header {
 }
 .review-box3 .name-box {
     background-color: rgb(91, 213, 211);
+}
+.profile-pic {
+    height: 60px;
+    position: absolute;
+    left: 120px;
+    bottom: 80px;
+}
+img {
+    border-radius: 50%;
 }
