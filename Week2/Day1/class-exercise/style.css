@@ -1,0 +1,43 @@
+.green-box {
+    width: 1000px;
+    height: 500px;
+    background-color: lightgreen;
+    border: 2px solid green;
+    
+}
+.red-box {
+    width: 600px;
+    height: fit-content;
+    border: 2px solid red;
+    margin: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: stretch;
+    padding: 10px;
+    
+    
+}
+    
+.box1 {
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    
+}
+.box2 {
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+    flex: 1.2;
+    padding: 10px;
+   
+}
+.box3 {
+    background-color: red;
+    color: white;
+    text-align: center;
+    flex: 1.2;
+    padding: 10px;
+ 
+}
