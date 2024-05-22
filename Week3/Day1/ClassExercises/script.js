@@ -30,6 +30,10 @@ pets.splice(3,1,'horse')
 console.log(pets)
 console.log(pets.length)
 
+alert("hello");
+
+
+
 
 
 

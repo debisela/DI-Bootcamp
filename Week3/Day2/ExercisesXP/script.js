@@ -82,120 +82,120 @@ Instructions
 For each expression, in a Javascript file in VS CODE, predict what you think the output will be in a comment (//) without first running the command.
 Of course, explain each prediction.
 typeof(15)
-// Prediction:
-// Actual:
+// Prediction: Number because 15 is a number
+// Actual: Number
 
 typeof(5.5)
-// Prediction:
-// Actual:
+// Prediction: Number because 5.5 is a number
+// Actual: Number
 
 typeof(NaN)
-// Prediction:
-// Actual:
+// Prediction: NaN because it is not a number
+// Actual: Number
 
 typeof("hello")
-// Prediction:
-// Actual:
+// Prediction: string because it is a word
+// Actual: string
 
 typeof(true)
-// Prediction:
-// Actual:
+// Prediction: boolean because true is one of two boolean types
+// Actual: boolean
 
 typeof(1 != 2)
-// Prediction:
-// Actual:
+// Prediction: True because 1 is not equal to 2
+// Actual:boolean
 
 "hamburger" + "s"
-// Prediction:
-// Actual:
+// Prediction: hamburgers because + between two strings adds the words together
+// Actual: hamburgers
 
 "hamburgers" - "s"
-// Prediction:
-// Actual:
+// Prediction: NaN, it is not possible to substract a letter from a string
+// Actual:NaN
 
 "1" + "3"
-// Prediction:
+// Prediction: 13 because in this case 1 and 3 are strings
 // Actual:
 
 "1" - "3"
-// Prediction:
-// Actual:
+// Prediction: NaN, it is not possible to substract a tsring from another
+// Actual:-2
 
 "johnny" + 5
-// Prediction:
-// Actual:
+// Prediction: johnny5, string + nr returns the word and after the number
+// Actual: johnny5
 
 "johnny" - 5
-// Prediction:
-// Actual:
+// Prediction: NaN, it is not possible to substract a number from a string
+// Actual: NaN
 
 99 * "hello"
-// Prediction:
-// Actual:
+// Prediction: NaN, it is not possible to multiply a number with a string
+// Actual: NaN
 
 1 != 1
-// Prediction:
-// Actual:
+// Prediction: false, 1 is equal to 1
+// Actual: false
 
 1 == "1"
-// Prediction:
-// Actual:
+// Prediction: true, 1 is equal to 1
+// Actual: true
 
 1 === "1"
-// Prediction:
-// Actual:
+// Prediction: false, both are 1 but one is a number and one a string
+// Actual: false
 
 Exercise 6 : Guess The Answers #3
 Instructions
 For each expression, in a Javascript file in VS CODE, predict what you think the output will be in a comment (//) without first running the command.
 Of course, explain each prediction.
 5 + "34"
-// Prediction:
-// Actual:
+// Prediction: 534, number then a string
+// Actual: 534
 
 5 - "4"
-// Prediction:
-// Actual:
+// Prediction: 1, 5-4 is 1
+// Actual: 1
 
 10 % 5
-// Prediction:
-// Actual:
+// Prediction: 0, no remainder when dividing 10 through 5
+// Actual: 0 
 
 5 % 10
-// Prediction:
-// Actual:
+// Prediction: 5
+// Actual: 5
 
 " " + " "
-// Prediction:
-// Actual:
+// Prediction: "  ", space + space
+// Actual: "  "
 
 " " + 0
-// Prediction:
-// Actual:
+// Prediction: 0, space and 0 after
+// Actual: 0
 
 true + true
-// Prediction:
-// Actual:
+// Prediction: 2, true is same as one
+// Actual: 2
 
 true + false
-// Prediction:
-// Actual:
+// Prediction: 1, true is one and false is 0
+// Actual: 1
 
 false + true
-// Prediction:
-// Actual:
+// Prediction: 1, true is one and false is 0
+// Actual: 1
 
 false - true
-// Prediction:
-// Actual:
+// Prediction: -1, 0-1
+// Actual: -1
 
 !true
-// Prediction:
+// Prediction: false, ! means not
 // Actual:
 
 3 - 4
-// Prediction:
-// Actual:
+// Prediction: -1, substract 4 from 3
+// Actual: -1
     
 
 
