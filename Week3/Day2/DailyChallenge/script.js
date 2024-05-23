@@ -20,7 +20,9 @@ Access and then console.log “Oranges”.*/
 const moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 
 console.log(oranges);
+
 console.log(moreFruits);
+
 
 
 

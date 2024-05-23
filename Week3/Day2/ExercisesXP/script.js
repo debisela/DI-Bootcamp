@@ -38,6 +38,9 @@ myWatchedSeries.push("seinfeld");
 myWatchedSeries.splice(0,0,"how I met your mother");
 myWatchedSeries.splice(1,1);
 console.log(myWatchedSeries);
+
+
+
 /* Exercise 3 : The Temperature Converter
 Instructions
 Store a celsius temperature into a variable.
@@ -198,13 +201,3 @@ false - true
 // Actual: -1
 
     
-
-
-
-
-
-
-
-
-
-
