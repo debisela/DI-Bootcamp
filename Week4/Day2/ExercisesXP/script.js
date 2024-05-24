@@ -256,9 +256,9 @@ Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt
 function hotelCost(){
     let numberNight;
     while (true) {
-        numberNight = prompt("How many night are you staying?");
+        numberNight = prompt("How many nights are you staying?");
         if (numberNight !== null && !isNaN(numberNight) && Number(numberNight) > 0){
-            numberNight = Number.numberNight;
+            numberNight = Number(numberNight);
             console.log(140*numberNight + "$");
             break;
         }
