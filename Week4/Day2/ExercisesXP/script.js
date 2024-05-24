@@ -253,25 +253,18 @@ Call the function totalVacationCost()
 
 Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt inside the totalVacationCost() function. You need to change the 3 first functions, accordingly.
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function hotelCost(){
+    let numberNight;
+    while (true) {
+        numberNight = prompt("How many night are you staying?");
+        if (numberNight !== null && !isNaN(numberNight) && Number(numberNight) > 0){
+            numberNight = Number.numberNight;
+            console.log(140*numberNight + "$");
+            break;
+        }
+        else {
+            alert("please insert a number");
+        }
+    }
+}
+hotelCost()
