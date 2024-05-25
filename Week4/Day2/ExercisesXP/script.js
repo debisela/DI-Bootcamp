@@ -238,6 +238,7 @@ function hotelCost(){
         if (numberNight !== null && !isNaN(numberNight) && Number(numberNight) > 0){
             numberNight = Number(numberNight);
             console.log(140*numberNight + "$");
+            return 140*numberNight;
             break;
         }
         else {
@@ -265,6 +266,7 @@ function planeRideCost(){
         if (typeof destination === 'string'){
             //if (destination === "London"){
                 console.log(destination + " : 183$");
+                return 183;
             //}
             /*else if (destination === "Paris"){
                 console.log(destination + " 220$");
@@ -283,6 +285,7 @@ function planeRideCost(){
 planeRideCost()
 
 
+
 /*
 Define a function called rentalCarCost().
 It should ask the user for the number of days they would like to rent the car.
@@ -290,16 +293,48 @@ If the user doesn’t answer or if the answer is not a number, ask again.
 Calculate the cost to rent the car. The car costs $40 everyday.
 If the user rents a car for more than 10 days, they get a 5% discount.
 The function should return the total price of the car rental.
+*/
+function rentalCarCost(){
+    let numberDays;
+    while (true) {
+        numberDays = prompt("How many days are you renting the car?");
+        if (numberDays !== null && !isNaN(numberDays) && Number(numberDays) > 0){
+            numberDays = Number(numberDays);
+            if (numberDays <= 10){
+            console.log(40*numberDays + "$");
+            return 40*numberDays;
+        }
+        else{
+            console.log((40*numberDays)*0.95 + "$");
+            return (40*numberDays)*0.95;
+        }
+            break;
+        }
+        else {
+            alert("please insert a number");
+        }
+    }
+}
+rentalCarCost()
 
+/*
 Define a function called totalVacationCost() that returns the total cost of the user’s vacation by calling the 3 functions that you created above.
 Example : The car cost: $x, the hotel cost: $y, the plane tickets cost: $z.
 Hint: You have to call the functions hotelCost(), planeRideCost() and rentalCarCost() inside the function totalVacationCost().
 
-Call the function totalVacationCost()
+Call the function totalVacationCost()*/
 
-Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt inside the totalVacationCost() function. You need to change the 3 first functions, accordingly.
+function totalVacationCost(){
+    const hotelCostValue = hotelCost();
+    const planeRideCostValue = planeRideCost();
+    const rentalCarCostValue = rentalCarCost();
+    console.log('The car costs: ' + rentalCarCostValue + '$, the hotel costs:' + hotelCostValue + ' and the plane tickets cost: ' + planeRideCostValue + '$')
+}
+totalVacationCost()
+
+
+/*Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt inside the totalVacationCost() function. You need to change the 3 first functions, accordingly.
 */
 
-function rentalCarCost(){
-    
-}
+
+
