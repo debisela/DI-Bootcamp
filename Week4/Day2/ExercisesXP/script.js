@@ -273,7 +273,7 @@ function planeRideCost(){
             }
             else {
                 console.log(destination + " 300$");
-            }*/
+            }
             break;}
         else {
             alert("please insert a valid destination");
