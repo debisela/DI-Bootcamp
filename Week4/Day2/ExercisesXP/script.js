@@ -264,18 +264,17 @@ function planeRideCost(){
     while (true) {
         destination = prompt("Where are you travelling?");
         if (typeof destination === 'string'){
-            //if (destination === "London"){
+            if (destination === "London"){
                 console.log(destination + " : 183$");
                 return 183;
-            //}
-            /*else if (destination === "Paris"){
+            }
+            else if (destination === "Paris"){
                 console.log(destination + " 220$");
             }
             else {
                 console.log(destination + " 300$");
             }*/
             break;}
-        //}
         else {
             alert("please insert a valid destination");
         }
