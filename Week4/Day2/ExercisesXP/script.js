@@ -333,8 +333,7 @@ function totalVacationCost(){
 totalVacationCost()
 
 
-/*Bonus: Instead of using a prompt inside the 3 first functions, only use a prompt inside the totalVacationCost() function. You need to change the 3 first functions, accordingly.
-*/
+
 
 
 
