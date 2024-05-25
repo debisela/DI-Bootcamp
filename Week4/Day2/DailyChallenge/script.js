@@ -11,11 +11,19 @@ that will get displayed as:
 
 stars and words
 */
-function starFrame(){
+//function starFrame(){
     let input = prompt('enter several words separated by commas');
     let inputArray = input.split(',');
-    for (let i=0; i<inputArray.length; i++){
+    inputArray.unshift("*");
+    inputArray.push("*");
+    /*function longestWord(){
+        return inputArray.sort(function (a, b) {
+            return b.length - a.length;
+        })[0];
+    }*/
+    for (let i=0; i<inputArray.length; i++){   
     console.log('*' + inputArray[i] + '*')
     }
-}
-starFrame()
+//}
+//starFrame()
+
