@@ -11,7 +11,7 @@ that will get displayed as:
 
 stars and words
 */
-//function starFrame(){
+
    let input = prompt('enter several words separated by commas');
     let inputArray = input.split(',');
     let longestLength = Math.max(...inputArray.map(word => word.length));
@@ -20,6 +20,5 @@ stars and words
     for (let i=0; i<inputArray.length; i++){ 
     console.log('*' + " " + inputArray[i] + " " + " ".repeat(longestLength - inputArray[i].length) + '*')
     }
-//}
-//starFrame()
+
 
