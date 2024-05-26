@@ -68,3 +68,4 @@ for (let x in details) {
 
 
 
+
