@@ -263,19 +263,21 @@ function planeRideCost(){
     let destination;
     while (true) {
         destination = prompt("Where are you travelling?");
-        if (typeof destination === 'string'){
-            if (destination === "London"){
+        if (typeof destination == 'string' && isNaN(destination)){
+            switch (destination){
+                case  "London":
                 console.log(destination + " : 183$");
                 return 183;
-            }
-            else if (destination === "Paris"){
+                case "Paris":
                 console.log(destination + " 220$");
-            }
-            else {
+                return 220;
+            default:
                 console.log(destination + " 300$");
+                return 300;
             }
-            break;}
-        else {
+            break;
+        }
+            else {
             alert("please insert a valid destination");
         }
         
