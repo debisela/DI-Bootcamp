@@ -11,6 +11,18 @@ Sort the array in reverse order. (Not alphabetical, but reverse the current Arra
 At the end you should see this outcome:
 ["Kiwi", "Oranges", "Blueberries"]*/
 
+const fruits = ["Banana", "Apples", "Oranges", "Blueberries"];
+fruits.splice(0,1);
+console.log(fruits)
+console.log(fruits.sort())
+fruits.push("Kiwi");
+console.log(fruits)
+fruits.shift();
+console.log(fruits)
+fruits.reverse()
+console.log(fruits)
+
+
 /*
 Exercise 2:
 Using this array :
@@ -19,9 +31,7 @@ const moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 Access and then console.log “Oranges”.*/
 const moreFruits = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
 
-console.log(oranges);
-
-console.log(moreFruits);
+console.log(moreFruits[1][1]);
 
 
 
