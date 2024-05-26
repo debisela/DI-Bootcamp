@@ -78,6 +78,22 @@ for (let i = 0; i < colors2.length; i++) {
     console.log("My " + (i+1) + suffix + " choice is " +colors2[i])
 }
 
+/*
+Exercise 3 : Repeat The Question
+Instructions
+Prompt the user for a number.
+Hint : Check the data type you receive from the prompt (ie. Use the typeof method)
+
+While the number is smaller than 10 continue asking the user for a new number.
+Tip : Which while loop is more relevant for this situation?
+*/
+let numberPropmt = prompt("Please insert a number");
+numberPropmt = Number(numberPropmt);
+while (numberPropmt < 10) {
+    prompt("Please insert another number")
+    
+}
+
 
 
 
