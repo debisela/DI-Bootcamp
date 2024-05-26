@@ -20,6 +20,7 @@ if (x > y) {
 } else {
     console.log("y is the biggest number")
 }
+
 /*
 Exercise 2: Chihuahua
 Instructions
@@ -34,7 +35,7 @@ let newDog = "Chihuahua"
 console.log(newDog.length)
 console.log(newDog.toUpperCase())
 console.log(newDog.toLowerCase())
-if (newDog = "Chihuahua") {
+if (newDog === "Chihuahua") {
     console.log("I love Chihuahuas, it’s my favorite dog breed")
 } else {
     console.log("I dont care, I prefer cats")
@@ -59,6 +60,7 @@ break;
         console.log("invalid input");
         break;
 }
+
 /*
 Exercise 4: Group Chat
 Instructions
@@ -87,7 +89,6 @@ else if (users.length == 2){
 else {
     console.log(users[0] + " and " + users[1] + " and " + lastUsers.length +" more are online")
 }
-
 
 
 
