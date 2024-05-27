@@ -18,3 +18,12 @@ Change the font size of the whole body.
 
 Bonus: If the background color of the div is “light blue”, alert “Hello x and y” (x and y are the users in the div).
 */
+let divEl = document.querySelector('div');
+divEl.style.backgroundColor = 'lightblue';
+divEl.style.padding = '20px';
+let uL = document.querySelector('ul');
+let John = uL.children[0];
+uL.removeChild(John);
+let Pete = document.querySelector('ul').children[0];
+Pete.style.border = '1px solid black';
+document.body.style.fontFamily = 'Arial';
