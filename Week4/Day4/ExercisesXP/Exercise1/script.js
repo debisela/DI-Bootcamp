@@ -38,44 +38,13 @@ console.log(list2);
 /*
 Change each first name of the two <ul>'s to your name. (Hint : use a loop)
 */
-//let x = 0;
-//let y = 0
-//let John = document.getElementsByClassName('list').children[0];
-//John.array.forEach(element => {
-    console.log(document.querySelectorAll('ul.list')[0].children[0]);
-//});
-//array.forEach(element => {
-    
-//}); (let x = 0; x <= 2; i++) {
-   // if (i == 0) {
-     //   John.textContent = "Debi";
-   // }
-//}
-//John.textContent = "Debi";
-let listAll = [document.getElementsByClassName('list')];
-listAll.forEach(list => {
-    listAll.children[0].textContent = "Debi"   
+
+let lists = document.querySelectorAll('.list');
+console.log(lists);
+lists.forEach (list => {
+    list.children[0].textContent = "Debi"
+   
 });
-//console.log(David);
-//David.textContent = "Debi";
-
-/*
-function isDivisible(){
-    let sum = 0;
-    for (let i = 0; i <= 500; i++) {
-        if (i%23==0) {
-            console.log(i);
-            sum += i;
-        }
-    }
-    console.log(sum);
-}
-isDivisible();
-Bonus - Using Javascript:
-Add a class called student_list to both of the <ul>'s.
-Add the classes university and attendance to the first <ul>.
-*/
-
 
 
 
