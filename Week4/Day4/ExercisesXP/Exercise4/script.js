@@ -39,10 +39,19 @@ alreadyRead:  true
 let listBooks = document.querySelector('listBooks');
 let table = document.createElement('table');
 let row = document.createElement('tr');
-let title = document.createElement('td');
-let titleText = document.createTextNode(allBooks[0].title);
-title.appendChild(titleText);
-let author = document.createElement('td');
-let authorText = document.createTextNode(allBooks[0].author);
-author.appendChild(authorText);
-document.querySelector('div').appendChild(table).appendChild(row).appendChild(title).append(author);
+let book1 = document.createElement('td');
+let book1Text = document.createTextNode(allBooks[0].title + " written by " + allBooks[0].author);
+book1.appendChild(book1Text);
+if (allBooks[0].alreadyRead) {
+    book1.style.color = "red";
+}
+let book2 = document.createElement('td');
+let book2Text = document.createTextNode(allBooks[1].title + " written by " + allBooks[1].author);
+book2.appendChild(book2Text);
+if (allBooks[1].alreadyRead) {
+    book2.style.color = "red";
+}
+document.querySelector('div').appendChild(table).appendChild(row).appendChild(book1).append(book2);
+
+
+
