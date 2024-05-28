@@ -63,12 +63,16 @@ let passPlural = " down, pass them around";
 let passSing = " down, pass it around";
 
 let take = "take "
-
-for (i=2; i<userNumber; i++){
-    //let line1 = userNumber-(i) + wall;
+let sum = 0
+let userNew = 0
+for (i=1; i<15; i++){
+    sum += i;
+    userNew = userNumber-sum;
+    let line1 = userNew + wall;
     //let line2 = userNumber-(i) + bottle;
-    let line3 = take + i + passPlural;
+    
+    let line3 = take + (i+1) + passPlural;
     //console.log(line1,'\n',line2,'\n',line3);
-    console.log(line3);
+    console.log(line1,line3);
 }
 //userNumber -> userNumber - i, i start at 1
