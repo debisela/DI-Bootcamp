@@ -49,14 +49,14 @@ function playTheGame() {
         return;
     }
         
-    alert(computerNumber);
-    //return computerNumber;
-    console.log(numberPrompt, computerNumber);
-    //return;
+    //alert(computerNumber);
+    
+    //console.log(numberPrompt, computerNumber);
+    
     compareNumbers(numberPrompt,computerNumber);     
     }   
     }
-    playTheGame();
+   
 
 /*Second Part
 Outside of the playTheGame() function, create a new function named compareNumbers(userNumber,computerNumber) that takes 2 parameters : userNumber and computerNumber
@@ -74,27 +74,24 @@ function compareNumbers(numberPrompt, computerNumber) {
     
     let trials = 0;
     
-    while (trials < 2){
+    while (trials < 3){
     if (numberPrompt == computerNumber) {
-            alert("WINNER");
-            break;
+        alert("WINNER");
+        return;
         }
     else if (numberPrompt > computerNumber) {
         numberPrompt = Number(prompt("Your number is bigger then the computer's, guess again"));
-        alert(computerNumber);
-        //return;
+        //alert(computerNumber);
         }
     
     else if (numberPrompt < computerNumber){
         numberPrompt = Number(prompt("Your number is smaller then the computer's, guess again"));
-        alert(computerNumber);
-        //return;
+        //alert(computerNumber);
     }
     trials++;
     
 }
-alert("out of chances");
-    
+alert("out of chances");   
 }
-compareNumbers();
+
 
