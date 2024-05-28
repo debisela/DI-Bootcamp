@@ -32,12 +32,13 @@ Else (ie. he entered a number between 0 and 10), create a variable named compute
 */
 function playTheGame() {
     let playGame = confirm("Would you like to play the game?");
+    let computerNumber = Math.floor(Math.random()*11);
     if (playGame == false) {
         alert("no problem");
     }
+    
     else {
     let numberPrompt = prompt("Please enter a number between 0 and 10");
-    
     if (typeof numberPrompt == 'string' && isNaN(numberPrompt)){
         alert("Sorry, not a number");
         return;
@@ -47,11 +48,15 @@ function playTheGame() {
         alert("Sorry, it is not a good number");
         return;
     }
-    let computerNumber = Math.floor(Math.random()*11);
+        
+    alert(computerNumber);
+    //return computerNumber;
     console.log(numberPrompt, computerNumber);
+    //return;
     compareNumbers(numberPrompt,computerNumber);     
     }   
     }
+    playTheGame();
 
 /*Second Part
 Outside of the playTheGame() function, create a new function named compareNumbers(userNumber,computerNumber) that takes 2 parameters : userNumber and computerNumber
@@ -67,25 +72,26 @@ If the user guessed more than 3 times, alert “out of chances” and exit the f
 */
 function compareNumbers(numberPrompt, computerNumber) {
     let trials = 0;
-    
-    while (trials < 3){
-    if (numberPrompt === computerNumber) {
+    if (numberPrompt == computerNumber) {
         alert("WINNER");
         return;
     }
-    else if (numberPrompt > computerNumber) {
+    while (trials < 3){
+    if (numberPrompt > computerNumber) {
         numberPrompt = Number(prompt("Your number is bigger then the computer's, guess again"));
-        //compareNumbers(numberPrompt,computerNumber)
+        alert(computerNumber);
         //return;
         }
     
-    else {
+    else if (numberPrompt < computerNumber){
         numberPrompt = Number(prompt("Your number is smaller then the computer's, guess again"));
-        compareNumbers(numberPrompt,computerNumber)
+        alert(computerNumber);
+        //return;
     }
     trials++;
 }
 alert("out of chances");
+return;
 }
-playTheGame();
+compareNumbers();
 
