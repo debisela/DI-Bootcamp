@@ -201,14 +201,9 @@ const details = {
   }
 let sentence = '';
   for (const x in details) {
-    let sentence = x + " " + details[x] + " ";
-    //sentence.concat(sentenceNext);
+    sentence += x + " " + details[x] + " ";
     console.log(sentence);
-    //console.log(x.concat(details[x]));
     }   
-
-
-
 
 /*
 Exercise 7 : Secret Group
@@ -219,13 +214,38 @@ Hint: a string is an array of letters
 Console.log the name of their secret society. The output should be “ABJKPS”
 */
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+names.sort();
+let firstLetters = [];
+for(let i = 0; i <= names.length; i++) {
+    firstLetters += [names[i].charAt(0)];
+    console.log(firstLetters);
+  }
 
-for (const x in names) {
-    let firstLetter = names[x].charAt(0);
-    //firstLetter.sort()
-    console.log(firstLetter);
-    }   
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*[names[0].charAt(0),names[1].charAt(0),names[2].charAt(0),names[3].charAt(0),names[4].charAt(0),names[5].charAt(0)];
+firstLetters.sort();
+console.log(firstLetters.join(""));*/
+
+
+
+
+
+
+
+
 
 
 
