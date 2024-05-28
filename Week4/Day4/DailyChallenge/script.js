@@ -13,17 +13,19 @@ Should you still use an array for the planets ? Or an array of objects ?*/
 
 let planets = ["Earth","Jupiter","Saturn","Neptune","Mercury","Venus","Mars","Uranus"];
 let listPlanets = document.querySelector(".listPlanets");
+console.log(listPlanets);
 let planetColors = ["green","orange","blue","yellow","red","purple","brown","lightgreen"]
 
     for (let i = 0; i < planets.length; i++) {
         let newdiv = document.createElement('div');
-        newdiv.classList.add("planet");
         let planetName = document.createTextNode(planets[i])
         newdiv.appendChild(planetName);
+        newdiv.classList.add("planet");        
         newdiv.style.backgroundColor = planetColors[i];
         console.log(newdiv);  
+        listPlanets.appendChild(newdiv);
     }
- listPlanets.appendChild(newdiv);
+    
 
     
 
