@@ -71,13 +71,15 @@ If userNumber is lower than computerNumber, alert “Your number is smaller then
 If the user guessed more than 3 times, alert “out of chances” and exit the function.
 */
 function compareNumbers(numberPrompt, computerNumber) {
+    
     let trials = 0;
+    
+    while (trials < 2){
     if (numberPrompt == computerNumber) {
-        alert("WINNER");
-        return;
-    }
-    while (trials < 3){
-    if (numberPrompt > computerNumber) {
+            alert("WINNER");
+            break;
+        }
+    else if (numberPrompt > computerNumber) {
         numberPrompt = Number(prompt("Your number is bigger then the computer's, guess again"));
         alert(computerNumber);
         //return;
@@ -89,9 +91,10 @@ function compareNumbers(numberPrompt, computerNumber) {
         //return;
     }
     trials++;
+    
 }
 alert("out of chances");
-return;
+    
 }
 compareNumbers();
 
