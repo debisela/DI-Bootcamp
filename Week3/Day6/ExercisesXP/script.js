@@ -154,11 +154,13 @@ Check if the sum of Sarah’s and David’s rent is bigger than Dan’s rent. If
 
 console.log(building.numberOfFloors);
 console.log("in floor 1 there are " + building.numberOfAptByFloor.firstFloor + " and in floor 3 there are " + building.numberOfAptByFloor.thirdFloor + " apartments");
-
-
-
-
-
+console.log(building.nameOfTenants[1] + ' , ' + building.numberOfRoomsAndRent.dan[0]);
+let sumSaDa = building.numberOfRoomsAndRent.sarah[1] +  building.numberOfRoomsAndRent.david[1];
+console.log(sumSaDa);
+if (sumSaDa > building.numberOfRoomsAndRent.dan[1]) {
+    building.numberOfRoomsAndRent.dan[1] = 1200;
+    console.log(building.numberOfRoomsAndRent.dan[1]);
+}
 
 
 /*
