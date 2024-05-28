@@ -179,7 +179,7 @@ const family = {
 for (const x in family) {
     console.log(x);
     }
-    for (const x in family) {
+for (const x in family) {
         console.log(family[x]);
         }
 
@@ -193,8 +193,24 @@ const details = {
   the: 'reindeer'
 }
 Given the object above and using a for loop, console.log “my name is Rudolf the reindeer”
+*/
+const details = {
+    my: 'name',
+    is: 'Rudolf',
+    the: 'reindeer'
+  }
+let sentence = '';
+  for (const x in details) {
+    let sentence = x + " " + details[x] + " ";
+    //sentence.concat(sentenceNext);
+    console.log(sentence);
+    //console.log(x.concat(details[x]));
+    }   
 
 
+
+
+/*
 Exercise 7 : Secret Group
 Instructions
 const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
@@ -202,5 +218,19 @@ A group of friends have decided to start a secret society. The society’s name 
 Hint: a string is an array of letters
 Console.log the name of their secret society. The output should be “ABJKPS”
 */
+const names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+
+for (const x in names) {
+    let firstLetter = names[x].charAt(0);
+    //firstLetter.sort()
+    console.log(firstLetter);
+    }   
+    
+
+
+
+
+
+
 
 
