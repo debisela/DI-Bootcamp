@@ -56,7 +56,7 @@ For 1 bottle, you pass “it” around.
 For more than one bottle, you pass “them” around.
 */
 
-let userNumber = Number(prompt("insert a number"));
+/*let userNumber = Number(prompt("insert a number"));
 let wall = " bottles of beer on the wall";
 let bottle = " bottles of beer";
 let passPlural = " down, pass them around";
@@ -74,4 +74,26 @@ for (i=1; i<userNumber; i++){
     console.log(line1,'\n',line2,'\n',line3);
     }
 
-//userNumber -> userNumber - i, i start at 1
+//userNumber -> userNumber - i, i start at 1*/
+let userNumber = Number(prompt("insert a number"));
+let wall = " bottles of beer on the wall";
+let bottle = " bottles of beer";
+let passPlural = " down, pass them around";
+let passSing = " down, pass it around";
+let take = "take ";
+let i = 0;
+let sum = 0;
+let userNew = userNumber;
+while (userNew - i >=0){
+    sum += i;
+    userNew = userNumber-sum;
+    let line1 = userNew + wall;
+    let line2 = userNew + bottle;    
+    let line3 = take + (i+1) + passPlural;
+    i++;
+    if (i == 0) {
+    console.log(line1,'\n',line2,'\n',(line3 - passPlural));
+    } else {
+    console.log(line1,'\n',line2,'\n',line3);
+}   
+}
