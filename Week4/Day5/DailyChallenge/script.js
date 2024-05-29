@@ -90,10 +90,17 @@ while (userNew - i >=0){
     let line1 = userNew + wall;
     let line2 = userNew + bottle;    
     let line3 = take + (i+1) + passPlural;
-    i++;
-    if (i == 0) {
-    console.log(line1,'\n',line2,'\n',(line3 - passPlural));
+    let line4 = take + (i+1) + passSing;
+    
+    if (userNew - i ==0) {
+    console.log(line1)
+    }
+    else if (i == 0) {
+    console.log(line1,'\n',line2,'\n',line4);
     } else {
     console.log(line1,'\n',line2,'\n',line3);
 }   
+i++;
 }
+console.log("0 bottle of beer on the wall");
+
