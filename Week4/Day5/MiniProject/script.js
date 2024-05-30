@@ -33,29 +33,44 @@ Else (ie. he entered a number between 0 and 10), create a variable named compute
 function playTheGame() {
     let playGame = confirm("Would you like to play the game?");
     let computerNumber = Math.floor(Math.random()*11);
+    //Math.floor(Math.random()*11) gives random number between 0 and 11
+    //if press cancel:
     if (playGame == false) {
         alert("no problem");
     }
-    
-    else {
+    //if press ok:    
+    else {  
     let numberPrompt = prompt("Please enter a number between 0 and 10");
-    if (typeof numberPrompt == 'string' && isNaN(numberPrompt)){
+    
+    //check if there is no value
+    if (numberPrompt == ""){
+        alert("Please insert number");
+        return;
+    }
+    if (numberPrompt == null){
+        alert("Goodbye");
+        return;
+    }
+    // check if value is not a number
+    if (isNaN(numberPrompt)){
         alert("Sorry, not a number");
         return;
     }
+    //convert string to number   
     numberPrompt = Number(numberPrompt);
     if (numberPrompt < 0 || numberPrompt > 10) {
         alert("Sorry, it is not a good number");
         return;
     }
-        
+    
     //alert(computerNumber);
     
     //console.log(numberPrompt, computerNumber);
     
     compareNumbers(numberPrompt,computerNumber);     
     }   
-    }
+}
+    
    
 
 /*Second Part
