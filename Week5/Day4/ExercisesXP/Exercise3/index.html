@@ -17,8 +17,10 @@
         </style>
     </head>
     <body>
-        <div id="target"></div>
+        <div id="target" ondrop="onDrop(event)" ondragover="onDragover(event)"></div>
         <br>
-        <div id="box"></div>
+        <div id="box" draggable="true" ondragstart="onDragStart(event)"></div>
+
+        <script src="script.js"></script>
     </body>
     </html>
