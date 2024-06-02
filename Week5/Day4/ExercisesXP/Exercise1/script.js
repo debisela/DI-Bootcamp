@@ -65,3 +65,4 @@ function stopInterval(){
 document.getElementById('clear').addEventListener('click', stopInterval);
 
 
+
