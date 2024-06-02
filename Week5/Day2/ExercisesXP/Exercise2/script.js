@@ -19,22 +19,22 @@ Retrieve the inputs by their id and console.log them.
 
 Retrieve the inputs by their name attribute and console.log them.
 */
-let form = document.forms[0];
+const form = document.forms[0];
 console.log(form);
 
-let input1 = document.getElementById("fname");
-let input2 = document.getElementById("lname");
-let input3 = document.getElementById("submit");
-console.log(input1,input2,input3);
+let input1 = form['fname'];
+console.log(input1);
+let input2 = form['lname'];
+console.log(input2);
 
-let input1Name = form.elements.firstname[0];
-let input2Name = form.elements.lastname;
+let input1name = form['firstname'];
+console.log(input1name);
+let input2name = form['lastname'];
+console.log(input2name);
 
-console.log(input1Name,input2Name);
-
-/*
-When the user submits the form (ie. submit event listener)
+/*When the user submits the form (ie. submit event listener)
 use event.preventDefault(), why ?
+
 get the values of the input tags,
 make sure that they are not empty,
 create an li per input value,
@@ -47,15 +47,25 @@ The output should be :
 </ul>
 */
 
+//add preventDefault in order to be able to add custom actions, such as validation, before sending form data to server
+form.addEventListener('submit', function(e){
+ e.preventDefault();
+  let firstNameValue = input1name.value;
+  let lastNameValue = input2name.value;
+  console.log(firstNameValue,lastNameValue);
+  
+  if (firstNameValue == "" || lastNameValue == "" ){
+    alert('please insert a name');
+  }
+  else{
+    let liNewFirstName = document.createElement('li');
+    let liNewFirstNameValue = document.createTextNode(firstNameValue);
+    liNewFirstName.appendChild(liNewFirstNameValue);
+    let liNewLastName = document.createElement('li');
+    let liNewLastNameValue = document.createTextNode(lastNameValue);
+    liNewLastName.appendChild(liNewLastNameValue);
+    document.querySelector('ul').appendChild(liNewFirstName);
+    document.querySelector('ul').appendChild(liNewLastName);
+  }
+});
 
-//input3.addEventListener("submit", formSub());
-
-function formSub(){
-//event.preventDefault();
-//alert('hii');
-let firstName = input1.value;
-let lastName = input2.value;
-alert(firstName);
-console.log(firstName,lastName);
-
-}
