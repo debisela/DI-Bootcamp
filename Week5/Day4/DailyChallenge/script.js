@@ -13,14 +13,13 @@ Hint : Check out keycodes in Javascript or Regular Expressions
 */
 
 const form = document.forms[0];
-//console.log(form);
 
 let input = form['input'];
 
-//console.log(input1);
 form.addEventListener('submit', function(e){
     e.preventDefault();
     let inputValue = input.value;
+    ///^[a-zA-Z]+$ returns true if it is a letter and false if not
     let x = /^[a-zA-Z]+$/;
 
     if (x.test(inputValue) == false){
