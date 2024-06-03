@@ -1,26 +1,30 @@
 body {
     background-color: red;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 section {
-    margin: auto;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+
 }
 
 h1 {
     color: white;
+    width: 300px;
+    text-align: center;
 }
 
 
-div {
-    width: 200px;
-    height: fit-content;
+.listTasks {
+    width: 300px;
+    height: 400px;
     background-color: white;
-    
-    
+    padding: 15px;
+    font-size: 1.2em;
 }
-.class {
-    background-color: white;
-    width: 200px;
-    height: fit-content;
-    color: black;
+p {
+    border-bottom: 1px solid blue;
+    padding: 5px;
 }
