@@ -32,7 +32,7 @@ const tasks = [];
 
 const form = document.forms[0];
 
-let newTask = form['new task'];
+let newTask = form['new-task'];
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
@@ -47,11 +47,20 @@ form.addEventListener('submit', function(e){
         let newi = document.createElement('i');
         newi.className = "fa-light fa-x";
         let newpValue = document.createTextNode(" "+newTaskValue);
-        let checkBox = document.createElement("INPUT");
-        checkBox.setAttribute("type", "checkbox");
+        let checkBox = document.createElement("input");
+        checkBox.type = "checkbox";
+        checkBox.id = "newTask"
+        //checkBox.setAttribute("type", "checkbox");
+        let label = document.createElement("label");
+        label.for = "newTask";
+        label.classList.add('task-label');
+        label.textContent = newTaskValue;
+        //label.for = "checkbox";
+        //label.appendChild(labelValue);
         newp.appendChild(newi);
         newp.appendChild(checkBox);
-        newp.appendChild(newpValue);
+        newp.appendChild(label);
+        //newp.appendChild(newpValue);
         document.querySelector('.listTasks').appendChild(newp);  
     }
 })

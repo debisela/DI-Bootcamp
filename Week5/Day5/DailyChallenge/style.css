@@ -18,17 +18,37 @@ h1 {
 
 
 .listTasks {
-    width: 300px;
+    width: 270px;
     height: 400px;
     background-color: white;
     padding: 15px;
+    margin-top: 10px;
     font-size: 1.2em;
 }
 p {
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid #8d8df4;
     padding: 5px;
 }
 i {
     background-color: red;
     color: white;
 }
+#MyForm {
+    display: flex;
+    width: 300px;
+}
+#new-task {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    }
+
+#submit {
+    background-color: white;
+    color: #8d8df4;
+    font-weight: bold;
+    font-size: 1.2em;
+    border: none;
+    width: 60px;
+}
+
