@@ -44,9 +44,15 @@ form.addEventListener('submit', function(e){
     else {
         tasks.push(newTaskValue);
         let newp = document.createElement('p');
-        let newpValue = document.createTextNode(newTaskValue);
+        let newi = document.createElement('i');
+        newi.className = "fa-light fa-x";
+        let newpValue = document.createTextNode(" "+newTaskValue);
+        let checkBox = document.createElement("INPUT");
+        checkBox.setAttribute("type", "checkbox");
+        newp.appendChild(newi);
+        newp.appendChild(checkBox);
         newp.appendChild(newpValue);
-        document.querySelector('.listTasks').appendChild(newp);      
+        document.querySelector('.listTasks').appendChild(newp);  
     }
 })
 
