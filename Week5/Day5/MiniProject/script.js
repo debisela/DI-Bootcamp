@@ -1,9 +1,10 @@
 
-for (let i = 0; i <= 21; i++) {
+for (let i = 0; i < 21; i++) {
     let newColorDiv = document.createElement('div');
     newColorDiv.className = "color-fields";
-    //let randomColor = Math.floor(Math.random()*16777215).toString(16);
-    newColorDiv.style.backgroundColor = 'blue';
+  
+    let randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    newColorDiv.style.backgroundColor = randomColor;
     document.getElementById('sidebar').appendChild(newColorDiv)
     
 }

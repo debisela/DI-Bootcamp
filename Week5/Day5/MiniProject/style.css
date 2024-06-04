@@ -27,7 +27,7 @@ body {
     height: 100vh;
     border: 1px solid black;
     grid-template-columns: repeat(3, 80px);
-    grid-template-rows: repeat(8, 100px);
+    grid-template-rows: repeat(8, 80px);
 }
 button {
     display: grid;
@@ -41,6 +41,7 @@ button {
 
 div.color-fields {
     border: 1px solid black;
+    margin: 3px;
 }
 
 #main {
@@ -49,7 +50,7 @@ div.color-fields {
     
     border: 1px solid black;
     grid-template-columns: repeat(55, 18px);
-    grid-template-rows: repeat(21, 40px);
+    grid-template-rows: repeat(21, 18px);
 }
 .drawing-fields {
     background-color: white;
