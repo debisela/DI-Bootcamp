@@ -37,7 +37,7 @@ button {
     border-radius: 15px;
 }
 
-#color-pallette{
+.pallette{
     display: grid;
     width: 260px;
     height: fit-content;
