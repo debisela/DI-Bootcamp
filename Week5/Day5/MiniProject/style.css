@@ -29,9 +29,17 @@ body {
     grid-template-columns: repeat(3, 80px);
     grid-template-rows: repeat(8, 100px);
 }
+button {
+    display: grid;
+    width: 250px;
+    height: 30px;
+    border: 1px solid black;
+    grid-template-columns: 250px;
+    grid-template-rows: 100px;
+}
 
 
-div.color-fields0 {
+div.color-fields {
     border: 1px solid black;
 }
 
