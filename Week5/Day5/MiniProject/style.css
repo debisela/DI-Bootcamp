@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+/*this makes sure when adding borders that it is not added to the size*/
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 1250px;
+}
+/*remove custom margin and padding*/
+
+#container {
+    border: 1px solid red;
+    width: 1250px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: grey;
+    padding: 10px;
+    /*one column that is 1 fraction(25%) the other 4 fraction(75%)*/
+}
+
+#sidebar {
+    display: grid;
+    width: 250px;
+    height: 100vh;
+    border: 1px solid black;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(8, 100px);
+}
+
+
+div.color-fields0 {
+    border: 1px solid black;
+}
+
+#main {
+    display: grid;
+    width: 1000px;
+    
+    border: 1px solid black;
+    grid-template-columns: repeat(55, 18px);
+    grid-template-rows: repeat(21, 40px);
+}
+.drawing-fields {
+    background-color: white;
+    border: 1px solid lightgrey;
+}
