@@ -9,7 +9,7 @@ for (let i = 0; i < 21; i++) {
     
 }
 
-for (let i = 0; i <= 1924; i++) {
+for (let i = 0; i <= 1791; i++) {
     let newDiv = document.createElement('div');
     newDiv.className = "drawing-fields"
     document.getElementById('main').appendChild(newDiv)

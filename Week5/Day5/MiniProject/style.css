@@ -10,11 +10,12 @@ body {
 /*remove custom margin and padding*/
 
 #container {
-    border: 1px solid red;
-    width: 1250px;
-    height: fit-content;
+    /*border: 1px solid red;*/
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     background-color: grey;
     padding: 10px;
     /*one column that is 1 fraction(25%) the other 4 fraction(75%)*/
@@ -22,47 +23,42 @@ body {
 
 #sidebar {
     display: grid;
-    width: 250px;
     height: fit-content;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
 }
 button {
     display: grid;
-    width: 240px;
+    width: 260px;
     height: 80px;
     border: 1px solid black;
     margin: 5px;
-    grid-template-columns: 250px;
-    grid-template-rows: 100px;
-    grid-column-start: 1;
-    grid-column-end: 2;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5em;
-    border-radius: 5%;
+    border-radius: 15px;
 }
 
 #color-pallette{
     display: grid;
-    width: 250px;
+    width: 260px;
     height: fit-content;
-    border: 1px solid black;
-    grid-template-columns: repeat(3, 80px);
-    grid-template-rows: repeat(7, 80px);
+    /*border: 1px solid black;*/
+    grid-template-columns: repeat(3, 85px);
+    grid-template-rows: repeat(7, 85px);
 }
 .color-fields {
     border: 1px solid black;
-    margin: 3px;
+    margin: 5px;
 }
 
 #main {
     display: grid;
-    width: 1000px;
+    /*width: 1000px;*/
     padding-left: 2px;
     
-    border: 1px solid black;
-    grid-template-columns: repeat(55, 18px);
-    grid-template-rows: repeat(35, 18px);
+    /*border: 1px solid black;*/
+    grid-template-columns: repeat(64, 25px);
+    grid-template-rows: repeat(28, 25px);
 }
 .drawing-fields {
     background-color: white;
