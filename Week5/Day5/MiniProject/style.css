@@ -11,14 +11,13 @@ body {
 
 #container {
     /*border: 1px solid red;*/
-    height: 100%;
-    width: 100%;
+    height: auto;
+    width: auto;
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 5fr;
     background-color: grey;
     padding: 10px;
-    /*one column that is 1 fraction(25%) the other 4 fraction(75%)*/
 }
 
 #sidebar {
@@ -54,8 +53,7 @@ button {
 #main {
     display: grid;
     /*width: 1000px;*/
-    padding-left: 2px;
-    
+    padding-left: 2px; 
     /*border: 1px solid black;*/
     grid-template-columns: repeat(64, 25px);
     grid-template-rows: repeat(28, 25px);
