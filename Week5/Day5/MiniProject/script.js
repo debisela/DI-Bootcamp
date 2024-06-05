@@ -45,11 +45,11 @@ drawingFields.forEach(function(elem) {
     elem.addEventListener('mousedown', draw);
     function draw(){
         elem.style.backgroundColor = colorName;
-        if (isDrawing == true){
-            elem.addEventListener('mouseover', draw);
-        }
+        //if (isDrawing == true){
+            
+        //}
     }
-    
+    elem.addEventListener('mouseover', draw);
     elem.addEventListener('mouseup', stopdraw);
     function stopdraw(){
         elem.style.backgroundColor = 'white';
@@ -58,7 +58,10 @@ drawingFields.forEach(function(elem) {
 });
 document.querySelector('button').addEventListener('click', clearAll);
 function clearAll(){
-    drawingFields.style.backgroundColor = 'white';
+    drawingFields.forEach(function(elem) {
+        elem.style.backgroundColor = 'white';
+    
+})
 }
 
 
