@@ -26,7 +26,7 @@ for (let i = 0; i <= 1791; i++) {
     
 }
 
-let colorName = 'black'
+let colorName = 'white'
 let colorFields = document.querySelectorAll('.color-fields');
 colorFields.forEach(function(elem) {
     elem.addEventListener('click', chooseColor);
@@ -39,12 +39,17 @@ colorFields.forEach(function(elem) {
 
 let drawingGrid = document.getElementById('main');
 let drawingFields = document.querySelectorAll('.drawing-fields');
+
+let isDrawing = false;
 drawingFields.forEach(function(elem) {
     elem.addEventListener('mousedown', draw);
     function draw(){
         elem.style.backgroundColor = colorName;
+        if (isDrawing == true){
+            elem.addEventListener('mouseover', draw);
+        }
     }
-    elem.addEventListener('mouseover', draw);
+    
     elem.addEventListener('mouseup', stopdraw);
     function stopdraw(){
         elem.style.backgroundColor = 'white';
@@ -53,7 +58,7 @@ drawingFields.forEach(function(elem) {
 });
 document.querySelector('button').addEventListener('click', clearAll);
 function clearAll(){
-    colorName = 'rgb(255,255,255)';
+    drawingFields.style.backgroundColor = 'white';
 }
 
 
