@@ -27,7 +27,8 @@ Q1. What will be the OUTPUT of the following statement?
 
     SELECT COUNT(*) 
     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id IS NULL )
-answer: 
+answer: SELECT id FROM SecondTab WHERE id IS NULL -> gives id = null
+expect 3 but answer is 0
 	
 
 
@@ -36,13 +37,15 @@ Q2. What will be the OUTPUT of the following statement?
     SELECT COUNT(*) 
     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id = 5 )
 
-answer: 2
+answer: expect 3 but answer is 2
+
 
 
 Q3. What will be the OUTPUT of the following statement?
 
     SELECT COUNT(*) 
     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab )
+answer: expect 2 but answer is 0
 
 
 Q4. What will be the OUTPUT of the following statement?
@@ -50,4 +53,4 @@ Q4. What will be the OUTPUT of the following statement?
     SELECT COUNT(*) 
     FROM FirstTab AS ft WHERE ft.id NOT IN ( SELECT id FROM SecondTab WHERE id IS NOT NULL )
 
-answer: 2
+answer: same as question2 -> 2
