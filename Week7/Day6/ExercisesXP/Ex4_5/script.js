@@ -8,6 +8,18 @@ Write a JavaScript program that displays the colors in the following order : “
 Check if at least one element of the array is equal to the value “Violet”. If yes, console.log("Yeah"), else console.log("No...")
 Hint : Use the array methods taught in class. Look at the lesson Array Methods.*/
 const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
+/*for (let i = 0; i < colors.length; i++){
+console.log(`${i+1}# choice is ${colors[i]}`);
+}*/
+
+/*if (colors.includes("Violet")){
+        console.log("Yeah")
+    }
+    else {
+        console.log("No...")
+    }*/
+
+
 
 
 
@@ -20,3 +32,4 @@ const colors = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
 const ordinal = ["th","st","nd","rd"];
 Write a JavaScript program that displays the colors in the following order : “1st choice is Blue .” “2nd choice is Green.” “3rd choice is Red.” ect…
 Hint : Use the array methods taught in class and ternary operator.*/
+const ordinal = ["th","st","nd","rd"];
