@@ -9,3 +9,13 @@ Create an array with all your monthly expenses, both positive and negative (mone
 Example : const details = ["+200", "-100", "+146", "+167", "-2900"]
 Create a program that modifies the expenses (ie. the positive AND the negative expenses) so that they will include taxes (multiply each expense by the VAT).
 Display your current bankAccount standing at the end of the month.*/
+let bankAmount = 10000;
+const VAT = 0.17;
+const details = ["+200", "-100", "+146", "+167", "-2900"];
+let numberDetails = details.map(Number);
+for(let i = 0; i<numberDetails.length; i++){
+    
+    numberDetails[i]=numberDetails[i]+(numberDetails[i]*VAT);
+    bankAmount+= numberDetails[i]
+}
+console.log(bankAmount);
