@@ -61,3 +61,29 @@ Using this array const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'fa
 
 Use the reduce() method to combine all of these into a single string.*/
 const epic = ['a', 'long', 'time', 'ago', 'in a', 'galaxy', 'far far', 'away'];
+const stringEpic = epic.reduce((total, item) => {
+    return `${total} ${item}`
+})
+console.log(stringEpic);
+
+/*
+🌟 Exercise 4 : Employees #2
+Instructions
+Using this object:*/
+
+const students = [{name: "Ray", course: "Computer Science", isPassed: true}, 
+               {name: "Liam", course: "Computer Science", isPassed: false}, 
+               {name: "Jenner", course: "Information Technology", isPassed: true}, 
+               {name: "Marco", course: "Robotics", isPassed: true}, 
+               {name: "Kimberly", course: "Artificial Intelligence", isPassed: false}, 
+               {name: "Jamie", course: "Big Data", isPassed: false}];
+/*Using the filter() method, create a new array, containing the students that passed the course.
+Bonus : Chain the filter method with a forEach method, to congratulate the students with their name and course name (ie. “Good job Jenner, you passed the course in Information Technology”, “Good Job Marco you passed the course in Robotics” ect…)
+*/
+const passedStudents = students.filter(item => item.isPassed);
+console.log(passedStudents);
+
+passedStudents.forEach(item => {
+    return `Good job ${item.name}`
+});
+console.log(passedStudents);
