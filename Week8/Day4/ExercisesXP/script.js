@@ -83,7 +83,13 @@ Bonus : Chain the filter method with a forEach method, to congratulate the stude
 const passedStudents = students.filter(item => item.isPassed);
 console.log(passedStudents);
 
-passedStudents.forEach(item => {
-    return `Good job ${item.name}`
+/*tried to do it with map:
+let congratulate = passedStudents.map(item => {
+    return `Good job ${item.name}, you passed ${item.course}`;
 });
-console.log(passedStudents);
+console.log(congratulate);*/
+
+//with forEach:
+passedStudents.forEach(item =>{
+    console.log(`Good job ${item.name}, you passed ${item.course}`);
+})
