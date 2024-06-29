@@ -141,10 +141,10 @@ document.getElementById('filterForm').addEventListener('submit', function(event)
       })
       //let newDiv = document.createElement('div');
       let newDiv = newChosenQuotes.map(item => {
-        return `<div style="display:inline-block;">
-                 <h2>${item.quote}</h2></div>`;
+        return `<ul>
+                 <li>${item.quote}</li></ul>`;
       });
-    document.getElementById('filterForm').innerHTML = newDiv.join("");
+    document.getElementById('quoteList').innerHTML = newDiv.join("");
     });
 
         
