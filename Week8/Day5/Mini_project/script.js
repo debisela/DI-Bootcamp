@@ -92,7 +92,7 @@ document.getElementById('like').addEventListener("click", like);
 
 chosenQuote.like = chosenQuote.like +1;
 
-console.log(chosenQuote);
+console.log(quotes);
 document.getElementById('like').innerHTML = chosenQuote.like;
 }
 }
@@ -133,3 +133,18 @@ Part 3 : Filter Form
 Create a form, that will filter the quotes depending on the name of the author. When the button of the form is clicked, display all the quotes from this specific author.
 
 Instead of showing all the quotes of the specific author. Show only one quote, and add a button “Previous” and a button “Next” that will display the next or previous quote.*/
+
+document.getElementById('filterForm').addEventListener('submit', function(event){
+    event.preventDefault();
+    let newChosenQuotes = quotes.filter(item => {
+        return item.author === document.getElementById('filterAuthor').value;
+      })
+      //let newDiv = document.createElement('div');
+      let newDiv = newChosenQuotes.map(item => {
+        return `<div style="display:inline-block;">
+                 <h2>${item.quote}</h2></div>`;
+      });
+    document.getElementById('filterForm').innerHTML = newDiv.join("");
+    });
+
+        
