@@ -24,7 +24,7 @@ let quotes = [
 
 let previousIdRandom = null;
 
-document.querySelector('button').addEventListener("click", generateQuote);
+document.getElementById('generateQuote').addEventListener("click", generateQuote);
 function generateQuote(){
     let idRandom; 
     //make sure that a new number is generated as long as new randomID = old randomID:  
@@ -47,6 +47,51 @@ function generateQuote(){
     document.getElementById("author").style.color = 'blue'; 
     document.getElementById("quote").innerHTML = chosenQuote.quote;
     document.getElementById("author").innerHTML = chosenQuote.author; 
+
+    //A button that gives the number of character inside each quote (space included)
+    document.getElementById('charSpace').addEventListener("click", charSpace);
+    
+    function charSpace(){
+let nrChar = chosenQuote.quote.length;
+console.log(nrChar);
+document.getElementById('charSpace').innerHTML = nrChar;
+}
+
+// A button that gives the number of character inside each quote (space NOT included)
+
+document.getElementById('charNoSpace').addEventListener("click", charNoSpace);
+    
+    function charNoSpace(){
+let nrCharNoSpace = chosenQuote.quote.replace(/\s/g, '').length
+console.log(nrCharNoSpace);
+document.getElementById('charNoSpace').innerHTML = nrCharNoSpace;
+}
+
+//A button that gives the number of words in each quote
+document.getElementById('nrWords').addEventListener("click", nrWords);
+    
+    function nrWords(){
+let nrWords = chosenQuote.quote.split(/\s+/).filter(element => element.length >0).length;
+console.log(nrWords);
+document.getElementById('nrWords').innerHTML = nrWords;
+}
+
+//A button “Like” for the user to like a quote. Hint : add a new key to each object that will represent the number of “likes”.
+
+
+document.getElementById('like').addEventListener("click", like);
+    
+    function like(){
+
+quotes.forEach(element => {
+    element.like = 0; 
+        });
+chosenQuote.like++;
+
+console.log(chosenQuote);
+document.getElementById('like').innerHTML = chosenQuote.like;
+}
+
 }
 
 /*
@@ -78,6 +123,7 @@ A button that gives the number of character inside each quote (space included)
 A button that gives the number of character inside each quote (space NOT included)
 A button that gives the number of words in each quote
 A button “Like” for the user to like a quote. Hint : add a new key to each object that will represent the number of “likes”.*/
+
 
 /*
 Part 3 : Filter Form

@@ -16,11 +16,11 @@ section {
 
 button {
     width: 200px;
-    height: 100px;
+    height: fit-content;
     background-color: pink;
     color: white;
-    
-    font-size: 2em;
+    text-align: center;
+    font-size: 1.5em;
     margin-top: 10px;
 
 }
