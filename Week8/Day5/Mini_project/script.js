@@ -24,6 +24,10 @@ let quotes = [
 
 let previousIdRandom = null;
 
+quotes.forEach(element => {
+    element.like = 0; 
+        });
+
 document.getElementById('generateQuote').addEventListener("click", generateQuote);
 function generateQuote(){
     let idRandom; 
@@ -79,19 +83,18 @@ document.getElementById('nrWords').innerHTML = nrWords;
 //A button “Like” for the user to like a quote. Hint : add a new key to each object that will represent the number of “likes”.
 
 
+
+
 document.getElementById('like').addEventListener("click", like);
     
     function like(){
 
-quotes.forEach(element => {
-    element.like = 0; 
-        });
-chosenQuote.like++;
+
+chosenQuote.like = chosenQuote.like +1;
 
 console.log(chosenQuote);
 document.getElementById('like').innerHTML = chosenQuote.like;
 }
-
 }
 
 /*
