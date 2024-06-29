@@ -29,7 +29,7 @@ function generateQuote(){
     let idRandom; 
     //make sure that a new number is generated as long as new randomID = old randomID:  
     do {
-        idRandom = Math.floor(Math.random()*10);
+        idRandom = Math.floor(Math.random()*(quotes.length));
     } while (idRandom === previousIdRandom);
 
     previousIdRandom = idRandom
@@ -52,10 +52,35 @@ function generateQuote(){
 /*
 Part 2 : Add Buttons
 In the HTML file, create a form with the inputs “Quote” and “Author” and a button. So when you click on the button, you can add a new quote to the array of object.
-Important: Don’t forget to set the id of the new quotes
+Important: Don’t forget to set the id of the new quotes*/
 
-In the HTML file, under the displayed quote, create a few more buttons:
+document.getElementById('form').addEventListener('submit', function(event){
+event.preventDefault();
+let newQuote = document.getElementById('newQuote').value;
+let newAuthor = document.getElementById('newAuthor').value;
+
+let newId = quotes.length;
+
+const newQuoteObj = {
+    id: newId,
+    author: newAuthor,
+    quote: newQuote
+};
+
+quotes.push(newQuoteObj);
+console.log(quotes);
+
+})
+
+
+/*In the HTML file, under the displayed quote, create a few more buttons:
 A button that gives the number of character inside each quote (space included)
 A button that gives the number of character inside each quote (space NOT included)
 A button that gives the number of words in each quote
 A button “Like” for the user to like a quote. Hint : add a new key to each object that will represent the number of “likes”.*/
+
+/*
+Part 3 : Filter Form
+Create a form, that will filter the quotes depending on the name of the author. When the button of the form is clicked, display all the quotes from this specific author.
+
+Instead of showing all the quotes of the specific author. Show only one quote, and add a button “Previous” and a button “Next” that will display the next or previous quote.*/
