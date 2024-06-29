@@ -130,21 +130,54 @@ A button “Like” for the user to like a quote. Hint : add a new key to each o
 
 /*
 Part 3 : Filter Form
-Create a form, that will filter the quotes depending on the name of the author. When the button of the form is clicked, display all the quotes from this specific author.
+Create a form, that will filter the quotes depending on the name of the author. When the button of the form is clicked, display all the quotes from this specific author.*/
 
-Instead of showing all the quotes of the specific author. Show only one quote, and add a button “Previous” and a button “Next” that will display the next or previous quote.*/
 
-document.getElementById('filterForm').addEventListener('submit', function(event){
+
+/*document.getElementById('filterForm').addEventListener('submit', function(event){
     event.preventDefault();
     let newChosenQuotes = quotes.filter(item => {
         return item.author === document.getElementById('filterAuthor').value;
       })
-      //let newDiv = document.createElement('div');
+      
       let newDiv = newChosenQuotes.map(item => {
         return `<ul>
                  <li>${item.quote}</li></ul>`;
       });
     document.getElementById('quoteList').innerHTML = newDiv.join("");
-    });
+    });*/
 
+    /*Instead of showing all the quotes of the specific author. Show only one quote, and add a button “Previous” and a button “Next” that will display the next or previous quote.*/
+
+    let currentIndex = 0;
+
+    document.getElementById('filterForm').addEventListener('submit', function(event){
+        event.preventDefault();
+        let newChosenQuotes = quotes.filter(item => {
+            return item.author === document.getElementById('filterAuthor').value;
+          })
+          currentIndex = 0;
+          let newDiv = `<ul>
+                     <li>${newChosenQuotes[currentIndex].quote}</li></ul>`;
+        document.getElementById('quoteList').innerHTML = newDiv;
+
+        document.getElementById('previous').addEventListener("click", previous);
+    
+        function previous(){
+    let previousQuote = `<ul>
+                     <li>${newChosenQuotes[currentIndex--].quote}</li></ul>`;
+    
+                     document.getElementById('quoteList').innerHTML = previousQuote;
+    }
+    document.getElementById('next').addEventListener("click", next);
+    
+    function next(){
+let nextQuote = `<ul>
+                 <li>${newChosenQuotes[currentIndex++].quote}</li></ul>`;
+
+                 document.getElementById('quoteList').innerHTML = nextQuote;
+}
+        });
+
+   
         
