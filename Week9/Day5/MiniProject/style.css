@@ -1,11 +1,12 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 header {
-    display: flex;
+display: flex;
 background-color: green;
 /*justify-content: center;*/
 align-items: center;
@@ -23,3 +24,33 @@ font-weight: lighter;
     
 
 }*/
+main {
+    box-sizing: border-box;
+    background-image: url('circuit-pattern.png');
+    background-color: purple;
+    
+}
+#robotContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid black;
+    
+}
+
+.robotCard {
+    text-align: center;
+    width: 250px;
+    background-image: url('card-pattern.png');
+    background-color: turquoise;
+    border-radius: 10%;
+    margin: 20px;
+}
+
+img {
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 200px;
+    margin-top: 20px;
+    background-color: darkgray;
+
+}
