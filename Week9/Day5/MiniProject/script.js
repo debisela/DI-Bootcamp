@@ -72,7 +72,6 @@ const robots = [
     ];
     //function that will create all DOM elements for the cards
 
-
    
     const robotContainer = document.getElementById('robotContainer');
 
@@ -99,13 +98,10 @@ const robots = [
 
     };
 
-     //make a forEach loop to display all the cards:
+     //create array for all robot card elements:
 
-     /*robots.forEach(robot => {
-        const robotCard = createRobotCard(robot);
-        robotContainer.appendChild(robotCard);
-     })*/
     const robotCards = robots.map(createRobotCard);
+    console.log(robotCards);
 
 
     //filter:
