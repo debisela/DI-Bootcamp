@@ -137,22 +137,15 @@ if the user enters the word "Hello", the promise resolves with this value ["....
 if the user entered the word "¡Hola!", the promise rejects because the character "¡" doesn't exist in the morse javascript object*/
 const toMorse = (obj) => {
     return new Promise((resolve, reject) => {
-        let sentence = prompt("Please enter a sentence").toLocaleLowerCase();
-        const lettersArray = sentence.split("").filter(char => char !== " ")
-        //console.log(lettersArray);
-
-        let arrMorse = [];
-        for (let key in object) {
-            if (obj.keys.includes(lettersArray)
-                
-            }
+        let sentence = prompt("Please enter a sentence/word").toLowerCase();
+        const lettersArray = sentence.split("").filter(char => char !== " ");
+        if (lettersArray.every(obj.keys)){
+            resolve lettersArray.forEach(element => {
+                return obj.keys === element
+            });
         }
-        if (obj.keys.includes(lettersArray)){
-            resolve
-                    
-                }
-            })
-
+        else {
+            reject('wrong')
         }
     })
 }
@@ -161,5 +154,14 @@ const toMorse = (obj) => {
 
 this function joins the morse translation by using line break and display it on the page (ie. On the DOM)*/
 
+const render = (obj) => {
+    const html = obj.map((item) => {
+        return `<div>${item.username} ${item.email}</div>`;
+  });
+  document.getElementById("morse").innerHTML = html.join("");
+};
+    
 /*5.Chain the three functions.*/
 
+
+        
