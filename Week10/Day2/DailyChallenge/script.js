@@ -137,9 +137,21 @@ if the user enters the word "Hello", the promise resolves with this value ["....
 if the user entered the word "¡Hola!", the promise rejects because the character "¡" doesn't exist in the morse javascript object*/
 const toMorse = (obj) => {
     return new Promise((resolve, reject) => {
-        let sentence = prompt("Please enter a sentence")
-        if (sentence.includes(obj.keys)){
+        let sentence = prompt("Please enter a sentence").toLocaleLowerCase();
+        const lettersArray = sentence.split("").filter(char => char !== " ")
+        //console.log(lettersArray);
+
+        let arrMorse = [];
+        for (let key in object) {
+            if (obj.keys.includes(lettersArray)
+                
+            }
+        }
+        if (obj.keys.includes(lettersArray)){
             resolve
+                    
+                }
+            })
 
         }
     })
