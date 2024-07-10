@@ -108,25 +108,28 @@ this function converts the morse json string provided above to a morse javascrip
 if the morse javascript object is empty, throw an error (use reject)
 else return the morse javascript object (use resolve)*/
 
-
+//comment from Ziv, use try and catch, so error can be handled. add consition to check if it is empty
 const toJS = (json) => {
     return new Promise((resolve, reject) => {
-        if (json){
-            resolve(JSON.parse(json));
+        try {
+            let jsonObj = JSON.parse(json);
+            resolve(jsonObj);
+        } catch (error) {
+            reject('this is not a JSON')
         }
-        else {
+        if (Object.keys(jsonObj).length === 0){
             reject('there is no object')
         }
     })
 }
 
-toJS(morse)
+/*toJS(morse)
 .then((result)=>{
     console.log(result);
 })
 .catch((error)=>{
     console.log(error);
-});
+});*/
 
 /*3.The second function called toMorse(morseJS), takes one argument: the new morse javascript object.
 
@@ -136,19 +139,36 @@ else return an array with the morse translation of the user’s word.
 if the user enters the word "Hello", the promise resolves with this value ["....", ".", ".-..", ".-..","---"]
 if the user entered the word "¡Hola!", the promise rejects because the character "¡" doesn't exist in the morse javascript object*/
 const toMorse = (obj) => {
+    let sentence = prompt("Please enter a sentence/word").toLowerCase();
     return new Promise((resolve, reject) => {
-        let sentence = prompt("Please enter a sentence/word").toLowerCase();
-        const lettersArray = sentence.split("").filter(char => char !== " ");
-        if (lettersArray.every(obj.keys)){
-            resolve lettersArray.forEach(element => {
-                return obj.keys === element
-            });
+        if (!sentence) {
+            reject("no input")
         }
         else {
-            reject('wrong')
+        const lettersArray = sentence.split("").filter(char => char !== " ");
+        const returnArr = lettersArray.map((char) => {
+        if (char in obj){
+            return (obj[char]);
+            
+        }
+        else {
+            reject('wrong input')
         }
     })
+    resolve (returnArr);
+        }
+
+    })
 }
+
+/*toJS(morse)
+.then((result)=>{
+    console.log(result);
+    return console.log(toMorse(result));
+})
+.catch((error)=>{
+    console.log(error);
+});*/
 
 /*4.The third function called joinWords(morseTranslation), takes one argument: the morse translation array
 
@@ -156,12 +176,25 @@ this function joins the morse translation by using line break and display it on 
 
 const render = (obj) => {
     const html = obj.map((item) => {
-        return `<div>${item.username} ${item.email}</div>`;
+        return `<div>${item}</div>`;
   });
   document.getElementById("morse").innerHTML = html.join("");
 };
     
 /*5.Chain the three functions.*/
+
+toJS(morse)
+.then((result)=>{
+    console.log(result);
+    return toMorse(result);
+})
+.then((result) => {
+    console.log(result);
+    return render(result);
+})
+.catch((error)=>{
+    console.log(error);
+});
 
 
         
