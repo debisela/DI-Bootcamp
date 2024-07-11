@@ -13,7 +13,7 @@ url: https://www.swapi.tech/api/people/ + random nr*/
 
 document.getElementById('search').addEventListener('click', function(event){
 let randomNr = Math.floor(Math.random()*83)+1;
-console.log(randomNr);
+//console.log(randomNr);
 
 const getInfo = () =>{
 document.getElementById('myContent').innerHTML=`<div class="fa-3x">
@@ -23,15 +23,16 @@ document.getElementById('myContent').innerHTML=`<div class="fa-3x">
                 <i class="fa-solid fa-cog fa-spin fa-spin-reverse"></i>
                 <i class="fa-solid fa-spinner fa-spin-pulse"></i>
                 <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i>
-              </div><div id="loading">loading...</div>`
+              </div><div id="loading">Loading...</div>`
 let url =`https://www.swapi.tech/api/people/${randomNr}`
+//check error: let url =`https://www.swapi.tech/api/people/17`
 fetch(url)
 .then((response)=>{
     if(response.ok){
         return response.json();
     }
     else{
-        throw new Error("there is an error")
+        throw new Error("Oh No! That person isn't available!")
     }
 })
 .then((obj)=>{
@@ -40,14 +41,14 @@ fetch(url)
     let objGender = obj.result.properties.gender;
     let objYear = obj.result.properties.birth_year;
     let objWorld = obj.result.properties.homeworld;
-    console.log(objWorld);
+    //console.log(objWorld);
     fetch(objWorld)
 .then((response)=>{
     if(response.ok){
         return response.json();
     }
     else{
-        throw new Error("there is an error")
+        throw new Error("Oh No! That world isn't available!")
     }
 })
 .then((newObj)=>{
@@ -55,11 +56,13 @@ fetch(url)
 
 })
 .catch((err)=>{
-    console.log(err);
+    document.getElementById('myContent').innerHTML = `<h2>${err}</h2>`
+    //console.log(err);
 })
 })
 .catch((err)=>{
-    console.log(err);
+    document.getElementById('myContent').innerHTML = `<h2>${err}</h2>`
+    //console.log(err);
 })
 }
 getInfo();
