@@ -45,3 +45,4 @@ document.getElementById('delete').addEventListener('click', function(event){
     document.getElementById('myGIF').removeChild(gifImg);
 });
 
+
