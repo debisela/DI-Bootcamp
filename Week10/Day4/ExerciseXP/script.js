@@ -64,3 +64,40 @@ fetch("https://www.swapi.tech/api/starships/9/")
 Create an async function, that will await for the above GET request.
 The program shouldn’t contain any then() method.
 Make sure to check the status of the Response and to catch any occuring errors.*/
+
+const starship = async() => {
+    try {
+        let response = await (await fetch("https://www.swapi.tech/api/starships/9/"));
+        let objectStarWars = await response.json();
+        console.log(objectStarWars);
+    } catch (error) {
+        console.log(error);
+        
+    }
+};
+starship();
+
+/*
+🌟 Exercise 4: Analyze
+Instructions
+Analyse the code provided below - what will be the outcome?
+*/
+function resolveAfter2Seconds() {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve('resolved');
+        }, 2000);
+    });
+}
+
+async function asyncCall() {
+    console.log('calling');
+    let result = await resolveAfter2Seconds();
+    console.log(result);
+}
+
+asyncCall();
+
+/*outcome:
+calling
+resolved (will appear after two seconds)*/
