@@ -36,7 +36,7 @@ fetch(url)
     let objYear = obj.result.properties.birth_year;
     let objWorld = obj.result.properties.homeworld;
     console.log(objName);
-    document.getElementById('myContent').innerHTML = `<h1>${objName}</h1><h3>${objHeight}</h3><h3>${objGender}</h3><h3>${objYear}</h3><h3>${objWorld}</h3>`
+    document.getElementById('myContent').innerHTML = `<h2>${objName}</h2><h3>${objHeight}</h3><h3>${objGender}</h3><h3>${objYear}</h3><h3>${objWorld}</h3>`
 
 })
 .catch((err)=>{
