@@ -13,6 +13,8 @@ myInput = document.getElementById('myText');
 let myInputValue = myInput.value;
 console.log(myInputValue);
 getGif(myInputValue)
+
+
 })
 let api_key = 'hpvZycW22qCjn5cRM1xtWB8NKq4dQ2My'
 //let tag = myInput
@@ -36,13 +38,15 @@ let url = `https://api.giphy.com/v1/gifs/random?api_key=${api_key}&tag=${tag}`
     gifImg = document.createElement('img');
     gifImg.src = gifURL;
     document.getElementById('myGIF').appendChild(gifImg);
+    
 })
 .catch((err)=>{
     console.log(err);
 })
 }
 document.getElementById('delete').addEventListener('click', function(event){
-    document.getElementById('myGIF').removeChild(gifImg);
+    document.getElementById('myGIF').innerHTML = '';
 });
+
 
 
