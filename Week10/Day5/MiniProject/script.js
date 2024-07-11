@@ -12,13 +12,18 @@ url: https://www.swapi.tech/api/people/ + random nr*/
 
 
 document.getElementById('search').addEventListener('click', function(event){
-
-
-
 let randomNr = Math.floor(Math.random()*83)+1;
-console.log(randomNr);
+//console.log(randomNr);
 
 const getInfo = () =>{
+document.getElementById('myContent').innerHTML=`<div class="fa-3x">
+                <i class="fa-solid fa-sync fa-spin"></i>
+                <i class="fa-solid fa-circle-notch fa-spin"></i>
+                <i class="fa-solid fa-cog fa-spin"></i>
+                <i class="fa-solid fa-cog fa-spin fa-spin-reverse"></i>
+                <i class="fa-solid fa-spinner fa-spin-pulse"></i>
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-spin-reverse"></i>
+              </div>`
 let url =`https://www.swapi.tech/api/people/${randomNr}`
 fetch(url)
 .then((response)=>{
@@ -35,8 +40,7 @@ fetch(url)
     let objGender = obj.result.properties.gender;
     let objYear = obj.result.properties.birth_year;
     let objWorld = obj.result.properties.homeworld;
-    console.log(objName);
-    document.getElementById('myContent').innerHTML = `<h2>${objName}</h2><h3>${objHeight}</h3><h3>${objGender}</h3><h3>${objYear}</h3><h3>${objWorld}</h3>`
+    document.getElementById('myContent').innerHTML = `<h2>${objName}</h2><h3>Height: ${objHeight}</h3><h3>Gender: ${objGender}</h3><h3>Birth Year: ${objYear}</h3><h3>Home World: ${objWorld}</h3>`
 
 })
 .catch((err)=>{
