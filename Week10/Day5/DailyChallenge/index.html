@@ -10,21 +10,14 @@
     <form id="myForm">
         <p>From:</p>
         <select name="fromCurrency" id="fromCurrency">
-            <option value="USD">USD</option>
-            <option value="NIS">NIS</option>
-            <option value="EUR">EUR</option>
-            <option value="GBP">GBP</option>
         </select>
         <p>To:</p>
-        <select name="fromCurrency" id="fromCurrency">
-            <option value="USD">USD</option>
-            <option value="NIS">NIS</option>
-            <option value="EUR">EUR</option>
-            <option value="GBP">GBP</option>
+        <select name="toCurrency" id="toCurrency">
         </select>
         <p>Amount:</p>
-        <input type="text">
-        <button type="submit">convert</button>
+        <input type="text" id="amount">
+        <button type="submit" id="convert">convert</button>
+        <div id="converted"></div>
     </form>
     
 
