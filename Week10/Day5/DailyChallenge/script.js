@@ -47,7 +47,7 @@ document.getElementById('myForm').addEventListener('submit', function(event){
         let rate = obj.conversion_rate;
         let rateNr = Number(rate);
         let convertedAmount = amountNr * rateNr;
-        document.getElementById('converted').innerHTML=`<div>${convertedAmount}</div>`
+        document.getElementById('converted').innerHTML=`<div>${Math.round(convertedAmount*100)/100} ${outputCurrency}</div>`
     })
     .catch((err)=>{
         console.log(err);

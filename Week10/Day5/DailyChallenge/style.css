@@ -1,0 +1,26 @@
+body {
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: url('https://www.moneydigest.com/img/gallery/heres-how-much-money-really-exists-in-the-world/intro-1704559079.jpg');
+   background-size: cover;
+    color: white;
+}
+h1{
+    text-align: center;
+    margin-top: 50px;
+}
+
+#myForm {
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+p {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#converted{
+    font-size: 1.5em;
+    font-weight: bold;
+}
