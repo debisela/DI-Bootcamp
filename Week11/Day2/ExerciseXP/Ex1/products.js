@@ -42,7 +42,7 @@ const products = [
       category: "Home Appliances"
     }
   ];
-  //console.log(products);
+  //console.log(products.name);
 
-  module.exports={products}
+  module.exports=products
   
