@@ -11,10 +11,6 @@ In app.js, require the greeting.js module and use the greet function to greet a 
 
 Run app.js using Node.js and see the greeting message.*/
 
-function greet(name){
-    console.log(`Hello ${name}`);
-}
-
-module.exports = {
-    greet
+export function greet(name){
+    return(`Hello ${name}`);
 }
