@@ -35,6 +35,7 @@ function renderOptions(arr){
 
 const checkAnswer = (event)=>{
     event.preventDefault();
+    document.getElementById('feedback').innerHTML = `${``}`
     const val = event.target.guess.value;
     console.log({val});
     fetch('http://localhost:5000/api/guess', {
@@ -48,6 +49,9 @@ const checkAnswer = (event)=>{
     .then(data =>{
         console.log(data);
         document.getElementById('feedback').innerHTML = `${data.msg}`
+        emoji();
+        options();
+
     })
     .catch((error)=>{
         console.log(error);

@@ -32,10 +32,12 @@ const emojis = [
 ];
 
 //get random number
-let random = Math.floor(Math.random()*(emojis.length))
+// let random = Math.floor(Math.random()*(emojis.length))
+let random
 //select one random emoji
 
 function getEmoji(array){
+    random = Math.floor(Math.random()*(emojis.length))
         return array[random]
     }
 
