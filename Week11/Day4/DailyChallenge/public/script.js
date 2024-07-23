@@ -3,8 +3,7 @@ const emoji = async()=>{
     try {
         const res = await fetch('http://localhost:5000/api/emoji');
         const data = await res.json()
-        console.log(data);
-        //render(data)
+        //console.log(data);
         document.getElementById('randomemoji').innerHTML = data.emoji;
     } catch (error) {
        console.log(error); 
@@ -16,7 +15,7 @@ const options = async()=>{
     try {
         const res = await fetch('http://localhost:5000/api/emojis')
         const data = await res.json()
-        console.log(data);
+        //console.log(data);
         renderOptions(data)
     } catch (error) {
        console.log(error); 
@@ -38,7 +37,7 @@ const checkAnswer = (event)=>{
     event.preventDefault();
     document.getElementById('feedback').innerHTML = `${``}`
     const val = event.target.guess.value;
-    console.log({val});
+    //console.log({val});
     fetch('http://localhost:5000/api/guess', {
         method: 'POST',
         headers:{
@@ -48,7 +47,7 @@ const checkAnswer = (event)=>{
     })
     .then(res =>res.json())
     .then(data =>{
-        console.log(data);
+        //console.log(data);
         document.getElementById('feedback').innerHTML = `${data.msg}`
         if (data.msg === 'correct'){
             score++;

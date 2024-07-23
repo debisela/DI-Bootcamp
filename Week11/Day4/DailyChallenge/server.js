@@ -64,7 +64,7 @@ app.get("/api/emojis", (req,res)=>{
 
 app.post("/api/guess", (req,res) =>{
     const guess = req.body;
-    console.log(guess);
+    //console.log(guess);
     const data1 = {msg:'correct'}
     const data2 = {msg:'wrong'}
     if (guess.val === emojis[random].name) {
