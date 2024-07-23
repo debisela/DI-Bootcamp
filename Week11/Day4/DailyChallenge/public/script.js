@@ -13,7 +13,7 @@ emoji();
 
 const options = async()=>{
     try {
-        const res = await fetch('http://localhost:5000/api/emojis');
+        const res = await fetch('http://localhost:5000/api/emojis')
         const data = await res.json()
         console.log(data);
         renderOptions(data)
@@ -36,5 +36,24 @@ function renderOptions(arr){
 const checkAnswer = (event)=>{
     event.preventDefault();
     const val = event.target.guess.value;
-    console.log(val);
+    console.log({val});
+    fetch('http://localhost:5000/api/guess', {
+        method: 'POST',
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify({val})
+    })
+    .then(res =>res.json())
+    .then(data =>{
+        console.log(data);
+        document.getElementById('feedback').innerHTML = `${data.msg}`
+    })
+    .catch((error)=>{
+        console.log(error);
+    })
+
+
+
+
 }
