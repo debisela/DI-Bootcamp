@@ -1,3 +1,4 @@
+let score = 0;
 const emoji = async()=>{
     try {
         const res = await fetch('http://localhost:5000/api/emoji');
@@ -49,6 +50,10 @@ const checkAnswer = (event)=>{
     .then(data =>{
         console.log(data);
         document.getElementById('feedback').innerHTML = `${data.msg}`
+        if (data.msg === 'correct'){
+            score++;
+        }
+        document.getElementById('score').innerHTML = `${score}`
         emoji();
         options();
 
