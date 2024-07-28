@@ -13,9 +13,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 app.use('/', express.static(__dirname+'/public'));
-app.get("/home", (req, res)=>{
-    res.sendFile(__dirname+'/public/index.html')
-})
+// // app.get("/", (req, res)=>{
+// //     res.sendFile(__dirname+'/public/index.html')
+// // })
 
 app.use('/', router);
 
