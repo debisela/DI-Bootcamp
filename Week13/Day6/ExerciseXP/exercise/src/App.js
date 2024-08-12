@@ -1,6 +1,7 @@
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import UserFavoriteAnimals from './UserFavoriteAnimals';
+import Exercise from './exercise3';
 
 /*
 Exercise 1: with JSX
@@ -43,14 +44,24 @@ Each <li> corresponds to one animal from the favAnimals array.
 Display the <li> tags. Tip : You can use the second parameter of the map function as a key to uniquely identify each HTML item
 */
 
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+  
+//         <h3>{user.firstName}</h3>
+//        <h3>{user.lastName}</h3>
+//        <UserFavoriteAnimals favAnimals={user.favAnimals} />        
+//       </header>
+//     </div>
+//   );
+// }
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-  
-        <h3>{user.firstName}</h3>
-       <h3>{user.lastName}</h3>
-       <UserFavoriteAnimals favAnimals={user.favAnimals} />        
+       <Exercise/>        
       </header>
     </div>
   );
