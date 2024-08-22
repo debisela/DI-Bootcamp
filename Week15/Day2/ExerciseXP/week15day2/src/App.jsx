@@ -36,8 +36,8 @@ function App() {
   //   </>
   // )
 
-  console.log(data);
-  console.log(dataEx3.SocialMedias);
+  // console.log(data);
+  // console.log(dataEx3.SocialMedias);
   
   
   // return(
@@ -48,13 +48,54 @@ function App() {
   // )
 
 
-  return(
-    <>
-    <div><Example1 data={dataEx3}/></div>
-    <div><Example2 data={dataEx3}/></div>
-    <div><Example3 data={dataEx3}/></div>
-    </>
-  )
+  // return(
+  //   <>
+  //   <div><Example1 data={dataEx3}/></div>
+  //   <div><Example2 data={dataEx3}/></div>
+  //   <div><Example3 data={dataEx3}/></div>
+  //   </>
+  // )
+
+const webhookURL = "https://webhook.site/#!/view/cdb07d40-23bb-4155-8be1-e03e3c823b9a/5063b256-cad4-4d76-95e4-6fb59a3159f1/1"
+
+const post = async()=>{
+  const data = {
+    key1: 'myusername',
+email: 'mymail@gmail.com',
+name: 'Isaac',
+lastname: 'Doe',
+age: 27
+  };
+
+  try{
+    const response = await fetch(webhookURL,{
+      method:'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      mode: 'no-cors',
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+
+    console.log("response:", result);
+  } catch (error){
+    console.log(error);
+    
+  }
+    
+  };
+
+
+return(
+  <>
+  <button onClick={post}>get data</button>
+  </>
+)
+
 }
 
 export default App
+
+//exercise 4 not working... 
