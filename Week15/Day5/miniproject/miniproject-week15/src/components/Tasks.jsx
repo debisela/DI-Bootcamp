@@ -40,7 +40,7 @@ const Tasks = ()=>{
                 onClick={()=>handleDelete(index)} 
                 onMouseEnter={()=>handleMouseEnter(index)}
                 onMouseLeave={()=>handleMouseLeave()}
-                style={{textDecoration:hoverIndex===index?'line-through': 'none'}}>{item}</div>
+                style={{textDecoration:hoverIndex===index?'line-through': 'none',cursor:'pointer'}}>{item}</div>
         
             ))}
 
