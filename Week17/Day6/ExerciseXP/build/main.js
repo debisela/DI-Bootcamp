@@ -77,3 +77,13 @@ console.log(createPerson("John", 40));
 // Ensure that you can successfully set or manipulate a property of the element.
 // Additional Notes:
 // Type assertions are a powerful way to let TypeScript know more about the type of an element when you’re certain of it. However, you should use them cautiously, as incorrect assertions can lead to runtime errors if the type is not as expected.
+const div = document.getElementById("domelement");
+div.textContent = "hello";
+function greet(name) {
+    if (name) {
+        return `hello ${name}`;
+    }
+    else {
+        return `hello you!`;
+    }
+}

@@ -130,6 +130,44 @@ console.log(createPerson("John", 40));
 
 // Type assertions are a powerful way to let TypeScript know more about the type of an element when you’re certain of it. However, you should use them cautiously, as incorrect assertions can lead to runtime errors if the type is not as expected.
 
+const div = document.getElementById("domelement") as HTMLDivElement
+div.textContent = "hello"
+
+// 🌟 Exercise 8: switch Statement with Complex Conditions
+// What You Will Learn:
+
+// How to use a switch statement in TypeScript.
+// How to handle multiple conditions using complex cases in a switch statement.
+// Instructions
+// Create a function getAction that takes a string representing a user role and returns an action for the user. Use a switch statement with complex conditions to handle multiple roles.
+
+// // Test the function with different roles
+// console.log(getAction("admin")); // Output: Manage users and settings
+// console.log(getAction("editor")); // Output: Edit content
+// console.log(getAction("viewer")); // Output: View content
+// console.log(getAction("guest")); // Output: Limited access
+// console.log(getAction("unknown")); // Output: Invalid role
+
+// 🌟 Exercise 9: Function Overloading with Default Parameters
+// What You Will Learn:
+
+// How to use function overloading in TypeScript.
+// How to create overloaded functions with default parameters.
+// Instructions
+// Create an overloaded function greet that can either take a name and greet the person, or take no arguments and return a default greeting.
+
+function greet(name:string):string;
+function greet():string;
+function greet(name?:string):string{
+    if(name){
+        return `hello ${name}`
+    }
+    else{
+        return `hello you!`
+    }
+}
+
+
 
 
 
