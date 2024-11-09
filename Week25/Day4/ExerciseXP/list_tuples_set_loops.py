@@ -102,18 +102,32 @@ while active:
 print(sum(total_cost))
 
 teen_names = ["Alice", "Bob", "Charlie", "Daisy"]
+allowed_teenagers = []
 
-
-teen_name=input("please enter name")
-teen_age=input("please enter your age")
-
-if teen_name in teen_names and int(teen_age)<16 or int(teen_age)>21:
-    teen_names.remove(teen_name)
-
-print(teen_names)
+for x in teen_names:
+        age = int(input(f"Enter the age of {x}: "))
+        
+        if 16 <= age <= 21:
+            print(f"{x} is not allowed to watch the movie.")
+        else:
+            allowed_teenagers.append(x)
+print("\nTeenagers allowed to watch the movie:", allowed_teenagers)
 
 #exrcise10:
 sandwich_orders = ["Tuna sandwich", "Pastrami sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Chicken sandwich", "Pastrami sandwich"]
+
+while "Pastrami sandwich" in sandwich_orders:
+    sandwich_orders.remove("Pastrami sandwich")
+print(sandwich_orders)
+
+finished_sandwiches=[]
+
+while sandwich_orders:
+    sandwich = sandwich_orders.pop(0)
+    finished_sandwiches.append(sandwich)
+
+for x in finished_sandwiches:
+    print(f"I made your {x}")
 
 
 
