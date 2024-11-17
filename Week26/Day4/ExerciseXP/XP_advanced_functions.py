@@ -73,6 +73,38 @@ result=ask_user(data)
 print(result)
 
 #exercise3:
+def get_age(year, month, day):
+    current_year = 2024
+    current_month = 11
+    current_day = 17
+
+    age = current_year-year
+    if (current_month, current_day) < (month, day):
+        age -=1
+    return age
+
+def can_retire(gender, date_of_birth):
+    #user_age_input = int(input("Please enter your age in this format: yyyy/mm/dd format:"))
+    #user_gender = input("enter you rgender, in this format: 'm' or 'f'")
+    user_year, user_month, user_day = map(int, date_of_birth.split('/'))
+    age = get_age(user_year, user_month, user_day)
+
+    if gender =="m":
+        return age >=67
+    elif gender=="f":
+        return age >=62
+    else:
+        return False
+def ask_user():
+    user_birthday_input = input("Please enter your birthday in this format: yyyy/mm/dd format:")
+    user_gender = input("enter your gender, in this format: 'm' or 'f'")
+    return can_retire(user_gender, user_birthday_input)
+
+result = ask_user()
+print(result)
+
+
+
 
 #exercise4:
 def get_parameter(a):
