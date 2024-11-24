@@ -104,6 +104,27 @@ class TheIncredibles(Family):
         super().__init__(members, last_name)
 
     def use_power(self):
+        for member in self.members:
+            try:
+                if member>18:
+                    print(f"{member['power']}")
+            except:
+                print(f"member is under 18")
+    def incredible_presentation(self):
+        print("Here is our powerful family:")
+        self.family_presentation()
+        for member in self.members:
+            print(f"power: {member['power']}, incredible_name: {member['incredible_name']}")
+
+incredibles_members = [
+        {'name':'Michael','age':35,'gender':'Male','is_child':False,'power': 'fly','incredible_name':'MikeFly'},
+        {'name':'Sarah','age':32,'gender':'Female','is_child':False,'power': 'read minds','incredible_name':'SuperWoman'}
+    ]
+incredibles_family=TheIncredibles(incredibles_members, "Incredibles")
+incredibles_family.incredible_presentation()
+incredibles_family.born(name='Jack',age=0,gender='Male',is_child=True, power='Unknown power', incredible_name='Incredible Baby Jack')
+incredibles_family.incredible_presentation()
+
 
 
 
