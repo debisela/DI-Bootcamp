@@ -1,13 +1,12 @@
 import random
 options=['r', 'p', 's']
-user_score=0
-computer_score=0
-draw_score=0
 
 class Game():
     
     def __init__(self):
-        pass
+        self.user_score=0
+        self.computer_score=0
+        self.draw_score=0
     def get_user_item(self):
         
         while True:
@@ -22,15 +21,21 @@ class Game():
         print(f"The computer chose: {computer_select}")
         return computer_select
     def get_game_result(self, user_item, computer_item):
-        if user_item=='r' and computer_item == 's' or user_item=='s' and computer_item=='p' or user_item=='p' and computer_item=='r':
-            user_score=user_score+1
-            return 'win'  
-        elif user_item=='r' and computer_item == 'p' or user_item=='s' and computer_item=='r' or user_item=='p' and computer_item=='s':
-            computer_score=computer_score+1
-            return 'loss'
-        else:
-            draw_score=draw_score+1
+        if user_item==computer_item:
+            self.draw_score+=1
             return 'draw'
-    #def play(self):
+
+        elif (user_item=='r' and computer_item == 's') or (user_item=='s' and computer_item=='p') or (user_item=='p' and computer_item=='r'):
+            self.user_score+=1
+            return 'win' 
+        else:
+            self.computer_score+=1 
+            return 'loss'
+            
+    def play(self):
+        user_move=self.get_user_item()
+        computer_move=self.get_computer_item()
+        result=self.get_game_result(user_move,computer_move)
+        print(f"this round is a {result}")
 
 
