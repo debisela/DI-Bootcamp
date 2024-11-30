@@ -29,6 +29,15 @@ class Text():
                 word_count[word]=1
         most_common=[word for word, count in word_count.items() if count == 1]
         return most_common
+    @classmethod
+    def from_file(cls, file_path):
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                text=file.read()
+                return cls(text)
+        except FileNotFoundError:
+            print("file not found")
+            return None
     
         
 text=Text("A good book would sometimes cost as much as a good house"
@@ -38,3 +47,6 @@ print(text.get_common_word())
 print(text.get_unique_words())
 
 #Part2:
+text_from_file=Text.from_file("the_stranger.txt")
+print(text_from_file.get_common_word())
+print(text_from_file.get_unique_words())
